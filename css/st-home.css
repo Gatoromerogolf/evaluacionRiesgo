@@ -1,0 +1,150 @@
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+  background:#e6e6e6;
+}
+
+/*-----------------------
+      MENU SUPERIOR */
+
+header, .main, footer {
+  width:90%;
+  max-width:1000px;
+  margin:20px auto;
+}
+
+header nav{
+  background-color:#528FD5;
+  overflow: hidden;
+}
+
+header nav ul{
+  list-style: none;
+}
+
+header nav ul li{
+  float:left;
+}
+
+header nav ul li a{
+  text-decoration: none;
+  padding:10px 15px;
+  display:block;
+  color:white;
+  font-family:'Roboto', sans-serif;
+  font-size:16px;
+  /*font-weight: bolder;*/
+  font-weight: bold;
+}
+
+header nav ul li a:hover{
+  background-color:#75ACEC;
+}
+
+/*   ARTICULOS  */
+
+.main .articles{
+  width:68.5%;
+  float:left;
+  margin-right: 1.5%;
+}
+
+.main .articles article{
+  padding:20px;
+  background:#fff;
+  margin-bottom: 20px;
+  font-family:'Lato', Tahoma, Geneva, Verdana, sans-serif;
+  font-size:12px;
+  font-weight: normal;
+}
+aside{
+  width: 30%;
+  background:#ff8000;
+  float:left;
+  padding:20px;
+  box-sizing: border-box;
+  font-family:'Lato', Tahoma, Geneva, Verdana, sans-serif;
+  font-size:12px;
+  font-weight: normal;
+}
+
+/*   logo hexa   */
+.logoHexa {
+  margin: 20px;
+  text-align: center; /* Centra el contenido horizontalmente */
+}
+
+
+/*   PIE DE PAGINA  */
+
+.footer  {
+  font-family:'Lato', Tahoma, Geneva, Verdana, sans-serif;
+  font-size:12px;
+  font-weight: normal;
+  background-color: rgb(#528FD5);
+  clear:both;
+  padding:10px 0px;
+  text-align: left;
+  text-decoration: none;
+  /*color:white;*/
+}
+
+.footer a {
+  display: inline-block;
+  margin-right: 20px;
+  font-family:'Lato', Tahoma, Geneva, Verdana, sans-serif;
+  font-size:12px;
+  text-decoration: none;  
+}
+
+/*  GOB CORPORATIVO  */
+.listas {
+  margin-left: 50px;
+  font-family:'Roboto', sans-serif;
+  font: size 16px;
+  list-style-type: square;
+}
+
+.listas li{
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-family:'Roboto', sans-serif;
+  color:blue;
+  font-size:20px;
+}
+
+ul ul{
+  color: rgb(70, 69, 72);
+  list-style-type:lower-alpha ;
+  margin-left: 50px;
+}
+
+/* .radiohori {
+  display: flex;
+  /*display: inline-block;*/
+  margin-right: 20px;
+} */
+
+
+.listas li {
+  display: flex;
+  align-items: center;
+}
+
+.listas li label{
+  margin-right: 15px; /* Espaciado entre cada botón de radio */
+}
+
+.listas li label.first-radio{
+  margin-left: 20px; /* Espaciado desde el texto al primer boton radio */
+}
+
+.listas li input[type="radio"] {
+  margin-right: 5px; /* Espaciado entre el radio y su etiqueta */
+}
