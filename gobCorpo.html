@@ -48,47 +48,116 @@
   <section class="main">
   <section class="gobCorpo">
 
-    <p>Texto introductorio/aclaratorio sobre las preguntas a contestar</p>
+    <hr>
+    <p><strong>Algunas aclaraciones previas</strong></p>
+    <hr>
+    <br>
+
+    <p>Para hacer las respuestas mandatorias (obligación de contestar TODAS) habría que incluir la opción necesaria, ejemplo: no aplica</p>
+    <p>Ejemplo de lo anterior: en la de miembros del Directorio con experiencia en especialidades: Control Interno, Ciberseguridad, etc..  Puede que ningún miembro del directorio tenga experiencia en alguna especialidad indicada?</p>
+    <br>
+    <p>Texto introductorio/aclaratorio sobre las preguntas a contestar.  Presentación de ayudas</p>
+    <h1><details><summary>Texto que requiera algun tipo de aclaración</summary>
+      <p style="font-size: 15px; color:gray; font-weight: 100; ">Esta es una opción para incorporar alguna ayuda en linea asociada a un dato en particular.</p>
+    </details></h1>
+
+    <br>
+    <p>Opcion con un botón de ayuda</p>
+
+    <button onclick="alert('Otra opcion para mostrar una ventana ante el click en un botón de ayuda o con el texto que se defina.  Pude ser del largo deseado. \n\n Admite salto de renglones \n\n Se le pude dar algún formato en especial')">Ayuda</button>
+
+    <br><br>
     <p>Tipos de respuesta:</p>
-    <p>Si - No</p>
-    <p>Si - No - No sabe?</p>
-    <p>Selección de opciones: Diario, Semanal, Quincenal, etc. etc.</p>
-    <p>Grado de cumplimiento/satisfacción (0 a 100%)</p>
+    <p>PREGUNTA: Habría que contemplar como respuesta un valor porcentual (ej de 0 a 100) como grado de cumplimiento o satisfacción?  - VER la sección de CUMPLIMIENTO Y CONTROL.</p>
+    <p>Se aplicaría en el caso de respuestas que requieran más amplitud que las de SI/NO, en casos que pueda existir alguna gradualidad, por ejemplo:  "Existe capacitación 'adecuada'...."</p>  Como el concepto de adecuado es subjetivo, se podría contemplar un porcentual o niveles del tipo: muy completo, completo, parcial, escaso, nulo"
+    <br><br>
+
+
+    <hr>
+    <p><strong>Desarrollo de la encuesta</strong></p>
+    <hr>
     <br>
     <h1>La composición y responsabilidades del Directorio</h1>
     <br>
     <ul class="listas">
-        <li class="radiohori<">Cantidad de directores que componen el Directorio  :
-          <!-- <div id="radio-button-2" class="botones">
-            <label for="unosolo"><input id="unosolo" type="radio" name="solo-uno" value="3">(3)</label><br>
-            <label for="dossolo"><input id="dossolo" type="radio" name="solo-uno" value="4">4 o más</label><br>
-        </div> -->
+        <li class="radiohori">Cantidad de directores que componen el Directorio  :
           <label class="first-radio"><input type="radio" name="opcion" value="3">3</label>
           <label><input type="radio" name="opcion" value="4">4 o más</label>
         </li>
-        <li>Directores que tienen experiencia de mas de 3 años como directores en Compañías</li>
-        <li>Directores que pueden ser considerados como empresarios/profesionales prestigiosos</li>
-        <li>Directores que tienen experiencia en el sector económico</li>
-        <li>Directores que son Directores Independientes</li>
-        <li>Directores mujeres</li>
+        <li>Directores que tienen experiencia de mas de 3 años como directores en Compañías
+          <label class="first-radio"><input type="radio" name="opcion" value="3">3</label>
+          <label><input type="radio" name="opcion" value="4">4 o más</label>
+        </li>
+        <li>Directores que pueden ser considerados como empresarios/profesionales prestigiosos
+          <label class="first-radio"><input type="radio" name="opcion" value="3">1</label>
+          <label><input type="radio" name="opcion" value="4">2</label>
+          <label><input type="radio" name="opcion" value="4">3</label>
+          <label><input type="radio" name="opcion" value="4">4 o más</label>
+        </li>
+        <li>Directores que tienen experiencia en el sector económico
+          <label class="first-radio"><input type="radio" name="opcion" value="3">1</label>
+          <label><input type="radio" name="opcion" value="4">2</label>
+          <label><input type="radio" name="opcion" value="4">3</label>
+          <label><input type="radio" name="opcion" value="4">4 o más</label>
+        </li>
+        <li>Directores que son Directores Independientes
+          <label class="first-radio"><input type="radio" name="opcion" value="3">1</label>
+          <label><input type="radio" name="opcion" value="4">2</label>
+          <label><input type="radio" name="opcion" value="4">3</label>
+        </li>
+        <li>Directores mujeres
+          <label class="first-radio"><input type="radio" name="opcion" value="3">1</label>
+          <label><input type="radio" name="opcion" value="4">2</label>
+          <details><summary></summary>
+            <p style="font-size: 15px; color:red; font-weight: 100; ">Esta es una opción para incorporar algun texto de ayuda u orientación en línea asociada a un dato en particular.</p>
+          </details>
+        </li>
         <li>El Directorio posee por lo menos un miembro con experiencia en (marcar todas las que correspondan)</li>
         <ul>
-            <li>Transformación digital/Change Management</li>
-            <li>Control Interno</li>
-            <li>Manejo de Riesgos</li>
-            <li>Manejo de Crisis</li>
-            <li>Ciberseguridad</li>
-            <li>Diversidad y cultura</li>
+            <li><input id="uno" type="checkbox"><label class="check" for="uno">Transformación digital/Change Management</label></li>
+            <li><input id="dos" type="checkbox"><label class="check" for="dos">Control Interno</label></li>
+            <li><input id="tres" type="checkbox"><label class="check" for="tres">Manejo de Riesgos</label></li>
+            <li><input id="cuatro" type="checkbox"><label class="check" for="cuatro">Manejo de Crisis</label></li>
+            <li><input id="cinco" type="checkbox"><label class="check" for="cinco">Ciberseguridad</label></li>
+            <li><input id="seis" type="checkbox"><label class="check" for="seis">Diversidad y Cultura</label></li>
         </ul>
-        <li>Frecuencia de reunión del Directorio:</li>
-        <li>El Directorio realiza reuniones adicionales Ad-Hoc</li>
-        <li>La empresa cuenta con un Advisory Board</li>
-        <li>El Advisory Board participa con cierta frecuencia en las reuniones del Directorio</li>
-        <li>Las funciones y responsabilidades del Directorio están documentadas</li>
-        <li>El Directorio estableció y documentó el propósito, la visión, la misión y los valores</li>
-        <li>Existe un Código de Gobierno Corporativo aprobado por el Directorio</li>
-        <li>Las remuneraciones del CEO, de los Directores y de la Alta Gerencia son aprobadas por el Directorio</li>
-        <li>Las rteuniones de Directorio se documentan en actas y son previamente aprobadas por los directores</li>
+        <li>Frecuencia de reunión del Directorio:
+          <label class="first-radio"><input type="radio" name="opcion" value="3">Trimestral</label>
+          <label><input type="radio" name="opcion" value="4">Mensual</label>
+          <label><input type="radio" name="opcion" value="4">Quincenal</label>
+        </li>
+        <li>El Directorio realiza reuniones adicionales Ad-Hoc:
+          <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+          <label><input type="radio" name="opcion" value="4">No</label>
+        </li>
+        <li>La empresa cuenta con un Advisory Board
+          <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+          <label><input type="radio" name="opcion" value="4">No</label>
+        </li>
+        <li>El Advisory Board participa con cierta frecuencia en las reuniones del Directorio
+          <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+          <label><input type="radio" name="opcion" value="4">No</label>
+        </li>
+        <li>Las funciones y responsabilidades del Directorio están documentadas
+          <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+          <label><input type="radio" name="opcion" value="4">No</label>
+        </li>
+        <li>El Directorio estableció y documentó el propósito, la visión, la misión y los valores
+          <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+          <label><input type="radio" name="opcion" value="4">No</label>
+        </li>
+        <li>Existe un Código de Gobierno Corporativo aprobado por el Directorio
+          <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+          <label><input type="radio" name="opcion" value="4">No</label>
+        </li>
+        <li>Las remuneraciones del CEO, de los Directores y de la Alta Gerencia son aprobadas por el Directorio
+          <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+          <label><input type="radio" name="opcion" value="4">No</label>
+        </li>
+        <li>Las rteuniones de Directorio se documentan en actas y son previamente aprobadas por los directores
+          <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+          <label><input type="radio" name="opcion" value="4">No</label>
+        </li>
     </ul>
     <br>
     <h1>Estructura organizacional.</h1>
@@ -96,17 +165,17 @@
     <ul class="listas">    
        <li>El Directorio ha conformado una estructura donde existen los siguientes roles efectivos (marcar todos los que correspondan)</li>
        <ul>
-        <li>Chief Executive Officer</li>
-        <li>Chief Operating Officer</li>
-        <li>Chief Financial Officer</li>
-        <li>Chief Risk Officer</li>
-        <li>Chief Tecnology Officer</li>
-        <li>Chief People & Culture Officer</li>
-        <li>Chief Innovation Officer</li>
-        <li>Board Secretary</li>
-        <li>Chief Legal Officer</li>
-        <li>Comité de Alta Gerencia</li>
-        <li>Auditor Interno</li>
+        <li><input id="uno" type="checkbox"><label class="check" for="uno">Chief Executive Officer</label></li>
+        <li><input id="uno" type="checkbox"><label class="check" for="uno">Chief Operating Officer</label></li>
+        <li><input id="uno" type="checkbox"><label class="check" for="uno">Chief Financial Officer</label></li>
+        <li><input id="uno" type="checkbox"><label class="check" for="uno">Chief Risk Officer</label></li>
+        <li><input id="uno" type="checkbox"><label class="check" for="uno">Chief Tecnology Officer</label></li>
+        <li><input id="uno" type="checkbox"><label class="check" for="uno">Chief People & Culture Officer</label></li>
+        <li><input id="uno" type="checkbox"><label class="check" for="uno">Chief Innovation Officer</label></li>
+        <li><input id="uno" type="checkbox"><label class="check" for="uno">Board Secretary</label></li>
+        <li><input id="uno" type="checkbox"><label class="check" for="uno">Chief Legal Officer</label></li>
+        <li><input id="uno" type="checkbox"><label class="check" for="uno">Comité de Alta Gerenciasabel></li>
+        <li><input id="uno" type="checkbox"><label class="check" for="uno">Auditor Interno</label></li>
        </ul>
     </ul>
 
@@ -116,16 +185,17 @@
     <ul class="listas">    
        <li>Los miembros del Directorio (y en su caso el Advisory Board) tienen acceso a:(marcar todos los que correspondan)</li>
        <ul>
-        <li>Comité de Alta Gerencia</li>
-        <li>Chief Operating Officer</li>
-        <li>Chief Financial Officer</li>
-        <li>Chief Risk Officer</li>
-        <li>Chief Technology Officer</li>
-        <li>Chief People & Culture Officer</li>
-        <li>Chief Innovation Officer</li>
-        <li>Chief Transformation Officer</li>
-        <li>Chief Legal Officer</li>
-        <li>Auditor Interno</li>
+
+        <li><input id="uno" type="checkbox"><label class="check" for="uno">Comité de Alta Gerencia</label></li>
+        <li><input id="uno" type="checkbox"><label class="check" for="uno">Chief Operating Officer</label></li>
+        <li><input id="uno" type="checkbox"><label class="check" for="uno">Chief Financial Officer</label></li>
+        <li><input id="uno" type="checkbox"><label class="check" for="uno">Chief Risk Officer</label></li>
+        <li><input id="uno" type="checkbox"><label class="check" for="uno">Chief Tecnology Officer</label></li>
+        <li><input id="uno" type="checkbox"><label class="check" for="uno">Chief People & Culture Officer</label></li>
+        <li><input id="uno" type="checkbox"><label class="check" for="uno">Chief Innovation Officer</label></li>
+        <li><input id="uno" type="checkbox"><label class="check" for="uno">Chief Transformation Officer</label></li>
+        <li><input id="uno" type="checkbox"><label class="check" for="uno">Chief Legal Officer</label></li>
+        <li><input id="uno" type="checkbox"><label class="check" for="uno">Auditor Interno</label></li>
        </ul> 
     </ul>
 
@@ -134,22 +204,65 @@
   <h1>Comités del Directorio.</h1>
   <br>
     <ul class="listas">    
-      <li>Existe un Comité de Auditoría que cuenta con la participación del auditor interno</li>
-      <li>La estructura de Comités del Directorio está documentada</li>
-      <li>Hay un Comité de nominaciones y sucesiones</li>
-      <li>Hay un Comité de compensaciones</li>
-      <li>Hay un Comité de Tecnologías de la Información</li>
-      <li>Hay un Comité de Riesgos</li>
-      <li>Cada Comité está compuesto por al menos un director independiente</li>
-      <li>Cada Comité envía informese al Directorio</li>
+      <li>Existe un Comité de Auditoría que cuenta con la participación del auditor interno:
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>La estructura de Comités del Directorio está documentada:
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>Hay un Comité de nominaciones y sucesiones:
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>Hay un Comité de compensaciones:
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>Hay un Comité de Tecnologías de la Información:
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>Hay un Comité de Riesgos:
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>Cada Comité está compuesto por al menos un director independiente:
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>Cada Comité envía informes al Directorio:
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
       <li>Frecuencia de las reuniones del</li>
         <ul>
-          <li>Comité de Alta Gerencia</li>
-          <li>Comité de Auditoría</li>
-          <li>Comité de Nominaciones</li>
-          <li>Comité de Compensaciones</li>
-          <li>Comité de Tencologías de la Información</li>
-          <li>Comité de Riesgos</li>
+          <li>Comité de Alta Gerencia:
+            <label class="first-radio"><input type="radio" name="opcion" value="3">Semanal</label>
+            <label><input type="radio" name="opcion" value="4">Quincenal</label>
+            <label><input type="radio" name="opcion" value="4">Mensual</label>
+          </li>
+          <li>Comité de Auditoría
+            <label class="first-radio"><input type="radio" name="opcion" value="3">Quincenal</label>
+            <label><input type="radio" name="opcion" value="4">Mensual</label>
+          </li>
+          <li>Comité de Nominaciones
+            <label class="first-radio"><input type="radio" name="opcion" value="3">Ad-hoc</label>
+            <label style="color: red" class="first-radio"><input type="radio" name="opcion" value="3"> ????????</label>
+          </li>
+          <li>Comité de Compensaciones
+            <label class="first-radio"><input type="radio" name="opcion" value="3">Ad-hoc</label>
+            <label class="first-radio"><input type="radio" name="opcion" value="3">Anual</label>
+          </li>
+          <li>Comité de Tecnologías de la Información
+            <label class="first-radio"><input type="radio" name="opcion" value="3">Mensual</label>
+            <label style="color: red" class="first-radio"><input type="radio" name="opcion" value="3"> ????????</label>
+          </li>
+          <li>Comité de Riesgos
+            <label class="first-radio"><input type="radio" name="opcion" value="3">Mensual</label>
+            <label style="color: red" class="first-radio"><input type="radio" name="opcion" value="3"> ????????</label>
+          </li>
         </ul>
     </ul>
 
@@ -158,21 +271,48 @@
   <h1>Comité de Auditoría.</h1>
   <br>
     <ul class="listas">    
-      <li>Aprueba los informes de Auditoría Interna</li>
-      <li>Vela por la subsanación de las debilidades de control interno detectadas por la Auditoría Interna</li>
-      <li>Aprueba el proceso de planificación de la Auditoría Interna y verifica el de la Auditoría Externa</li>
-      <li>Aprueba los estados contables</li>
-      <li>Aprueba los honorarios de la Auditoría Externa</li>
-      <li>Su Presidente es un Director independiente</li>
+      <li>Aprueba los informes de Auditoría Interna
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>Vela por la subsanación de las debilidades de control interno detectadas por la Auditoría Interna
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>Aprueba el proceso de planificación de la Auditoría Interna y verifica el de la Auditoría Externa
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>Aprueba los estados contables
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>Aprueba los honorarios de la Auditoría Externa
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>Su Presidente es un Director independiente
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
     </ul>
         
   <br>
   <h1>Información para el Directorio.</h1>
   <br>
     <ul class="listas">    
-      <li>El Directorio recibe KPI´s suficientes y sólidos desde la gerencia.</li>
-      <li>El Directorio ejerce consistentemente un desafío creíble a la información gerencial</li>
-      <li>El Directorio aprueba los contratos significativos celebrados por la gerencia</li>
+      <li>El Directorio recibe KPI´s suficientes y sólidos desde la gerencia.
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>El Directorio ejerce consistentemente un desafío creíble a la información gerencial
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>El Directorio aprueba los contratos significativos celebrados por la gerencia
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
     </ul>
 
             
@@ -180,11 +320,26 @@
   <h1>Estrategia.</h1>
   <br>
     <ul class="listas">    
-      <li>El Directorio participa en el proceso estratégico/táctico y aprueba el Plan Estratégico</li>
-      <li>La estrategia está documentada</li>
-      <li>La profundidad de las discusiones estratégicas en las reuniones es adecuada</li>
-      <li>El Directorio está al tanto de los cambios en la industria</li>
-      <li>El Directorio conoce la posición competitiva de los competidores</li>
+      <li>El Directorio participa en el proceso estratégico/táctico y aprueba el Plan Estratégico
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>La estrategia está documentada
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>La profundidad de las discusiones estratégicas en las reuniones es adecuada
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>El Directorio está al tanto de los cambios en la industria
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>El Directorio conoce la posición competitiva de los competidores
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
     </ul>
 
     
@@ -192,10 +347,22 @@
   <h1>Gestión de Riesgos.</h1>
   <br>
     <ul class="listas">    
-      <li>El Directorio ha determinado el apetito de riesgo para el negocio</li>
-      <li>El Directorio cuenta con las políticas y procedimientos adecuados para identificar los riesgos del negocio</li>
-      <li>El Directorio cuenta con las políticas y procedimientos adecuados para monitorear los riesgos</li>
-      <li>La independencia y la calidad de la estructura de gestión de riesgos están aseguradas</li>
+      <li>El Directorio ha determinado el apetito de riesgo para el negocio
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>El Directorio cuenta con las políticas y procedimientos adecuados para identificar los riesgos del negocio
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>El Directorio cuenta con las políticas y procedimientos adecuados para monitorear los riesgos
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>La independencia y la calidad de la estructura de gestión de riesgos están aseguradas
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
     </ul>
 
     
@@ -203,24 +370,68 @@
   <h1>Cumplimiento y Control.</h1>
   <br>
     <ul class="listas">    
-      <li>Existe una estructura documentada de primera y tercera línea de defensa</li>
-      <li>El departamento de auditoría está dirigido por un profesional competente</li>
-      <li>El auditor interno reporta al Presidente del comité de Auditoría</li>
-      <li>El Comité de Auditoría somete a la aprobación del Directorio al auditor externo y su remuneración</li>
+      <li>Existe una estructura documentada de primera y tercera línea de defensa
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <br>
+      <li>El departamento de auditoría está dirigido por un profesional competente
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <p>opción:</p>
+      <li><label for="porcentaje">Grado (%) de satisfacción con el desempeño del profesional a cargo del departamento de auditoría (0 a 100):</label> 
+        <label><input type="range" name="opcion" min="0" max="100"></label>
+      </li>
+      <p><strong><em>"El que estaba antes era muy bueno, pero se jubiló.  Éste es el que conseguimos pero no es lo mismo....</em></strong></p>
+      <br>
+
+      <li>El auditor interno reporta al Presidente del comité de Auditoría
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>El Comité de Auditoría somete a la aprobación del Directorio al auditor externo y su remuneración
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
     </ul>
 
   <br>
   <h1>Funcionamiento.</h1>
   <br>
     <ul class="listas">    
-      <li>El estatuto o el Código de Buen Gobierno determina la frecuencia de las reuniones del Directorio</li>
-      <li>El estatuto o el Código de Buen Gobierno deberán fijar las mayorías necesarias para que el Directorio sesione</li>
-      <li>La frecuencia de las reuniones de los Comités del Directorio es suficiente para el desempeño de sus funciones</li>
-      <li>La agenda de la reunión del Directorio cubre los temas correctos, priorizados y con una asignación de tiempo adecuada</li>
-      <li>Los miembros del Directorio tienen tiempo suficiente para discutir eficazmente durante las reuniones</li>
-      <li>Los miembros del Directorio van preparados a las reuniones</li>
-      <li>Existe capacitación adecuada para los miembros del Directorio</li>
-      <li>Existe un proceso de evaluación para directores</li>
+      <li>El estatuto o el Código de Buen Gobierno determina la frecuencia de las reuniones del Directorio
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>El estatuto o el Código de Buen Gobierno deberán fijar las mayorías necesarias para que el Directorio sesione
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>La frecuencia de las reuniones de los Comités del Directorio es suficiente para el desempeño de sus funciones
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>La agenda de la reunión del Directorio cubre los temas correctos, priorizados y con una asignación de tiempo adecuada
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>Los miembros del Directorio tienen tiempo suficiente para discutir eficazmente durante las reuniones
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>Los miembros del Directorio van preparados a las reuniones
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>Existe capacitación adecuada para los miembros del Directorio
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>Existe un proceso de evaluación para directores
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
     </ul>
   
     
@@ -228,12 +439,30 @@
   <h1>El Directorio y las Gerencias.</h1>
   <br>
     <ul class="listas">    
-      <li>El Directorio tienen conocimiento yt participa en la evaluación del desempeño de los ejecutivos</li>
-      <li>El Directorio supervisa que la gestión del talento es adecuada</li>
-      <li>El Directorio supervisa las evaluaciones de desempeño de las gerencias</li>
-      <li>El Directorio supervisa las decisiones de remuneración tomadas por las gerencias</li>
-      <li>Existe un Código de Conducta aprobado por el Directorio y se comunica a todos los integrantes</li>
-      <li>Existe un procedimiento para someter al Directorio las malas conductas de los integrantes de la empresa</li>
+      <li>El Directorio tienen conocimiento y participa en la evaluación del desempeño de los ejecutivos
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>El Directorio supervisa que la gestión del talento es adecuada
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>El Directorio supervisa las evaluaciones de desempeño de las gerencias
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>El Directorio supervisa las decisiones de remuneración tomadas por las gerencias
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>Existe un Código de Conducta aprobado por el Directorio y se comunica a todos los integrantes
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>Existe un procedimiento para someter al Directorio las malas conductas de los integrantes de la empresa
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
     </ul>
   
 
@@ -241,9 +470,18 @@
   <h1>Cultura y conducta empresarial.</h1>
   <br>
     <ul class="listas">    
-      <li>El Directorio entiende claramente las iniciativas culturales de la empresa</li>
-      <li>El Directorio recibe suficiente información para monitorear la cultura y el comportamiento ético de la empresa</li>
-      <li>El Directorio recibe suficiente información para monitorear la conciencia de riesgo de la empresa</li>
+      <li>El Directorio entiende claramente las iniciativas culturales de la empresa
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>El Directorio recibe suficiente información para monitorear la cultura y el comportamiento ético de la empresa
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>El Directorio recibe suficiente información para monitorear la conciencia de riesgo de la empresa
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
     </ul>
 
 
@@ -251,20 +489,44 @@
   <h1>Sucesiones.</h1>
   <br>
     <ul class="listas">    
-      <li>El Directorio participa adecuadamente en la sucesión del CEO</li>
-      <li>El Directorio participa en la planificación de las necesidades de nuevos directores y la sucesión de los ejecutivos</li>
-      <li>Existe un proceso documentado para gestionar la sucesión de los miembros del Directorio </li>
+      <li>El Directorio participa adecuadamente en la sucesión del CEO
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>El Directorio participa en la planificación de las necesidades de nuevos directores y la sucesión de los ejecutivos
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>Existe un proceso documentado para gestionar la sucesión de los miembros del Directorio 
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
     </ul>
     
   <br>
   <h1>Presidente del Directorio.</h1>
   <br>
     <ul class="listas">    
-      <li>Promueve una cultura de apertura, inclusión y un tono adecuado para el debate</li>
-      <li>Inculca la disciplina a todos los participantes contribuyendo a una reunión eficaz</li>
-      <li>Focaliza al Directorio en los asuntos relevantes y se involucra cuando surgen conflictos de interes</li>
-      <li>Fomenta y facilita debates de alta calidad</li>
-      <li>Establece sistemas para evaluar el funcionamiento del Directorio y el desempeño de sus miembros</li>
+      <li>Promueve una cultura de apertura, inclusión y un tono adecuado para el debate
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>Inculca la disciplina a todos los participantes contribuyendo a una reunión eficaz
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>Focaliza al Directorio en los asuntos relevantes y se involucra cuando surgen conflictos de interés
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>Fomenta y facilita debates de alta calidad
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>Establece sistemas para evaluar el funcionamiento del Directorio y el desempeño de sus miembros
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
     </ul>
 
     
@@ -272,8 +534,14 @@
   <h1>Secretaría del Directorio.</h1>
   <br>
     <ul class="listas">    
-      <li>La Secretaría se asegura del cumplimiento del Estatuto, el Código de Gobierno y el Reglamento del Directorio, en su caso</li>
-      <li>Los directores evalúan a la Secretaría</li>
+      <li>La Secretaría se asegura del cumplimiento del Estatuto, el Código de Gobierno y el Reglamento del Directorio, en su caso
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
+      <li>Los directores evalúan a la Secretaría
+        <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+        <label><input type="radio" name="opcion" value="4">No</label>
+      </li>
     </ul>
   
     </section>

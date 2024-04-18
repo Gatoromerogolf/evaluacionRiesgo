@@ -121,13 +121,13 @@ h1 {
 
 ul ul{
   color: rgb(70, 69, 72);
-  list-style-type:lower-alpha ;
+  list-style-type:none;
   margin-left: 50px;
 }
 
 /* .radiohori {
   display: flex;
-  /*display: inline-block;*/
+  /*display: inline-block;
   margin-right: 20px;
 } */
 
@@ -147,4 +147,9 @@ ul ul{
 
 .listas li input[type="radio"] {
   margin-right: 5px; /* Espaciado entre el radio y su etiqueta */
+}
+
+.listas li label.check{
+  display: inline-block;
+  margin-left: 5px; /* Espaciado desde el texto al primer boton checkbox */
 }
