@@ -52,27 +52,32 @@
     <p><strong>Algunas aclaraciones previas</strong></p>
     <hr>
     <br>
-
-    <p>Para hacer las respuestas mandatorias (obligación de contestar TODAS) habría que incluir la opción necesaria, ejemplo: no aplica</p>
-    <p>Ejemplo de lo anterior: en la de miembros del Directorio con experiencia en especialidades: Control Interno, Ciberseguridad, etc..  Puede que ningún miembro del directorio tenga experiencia en alguna especialidad indicada?</p>
+    <h4>Obligación de dar respuesta a todas las preguntas.</h4>
+    <p>Hacer las respuestas mandatorias asegura que no se saltee una respuesta por omisión involuntaria.</p>
+    <p>Si queremos evitar esas omisiones habría que agregar la opción que contemple el caso en que no se cumpla ninguna de las condiciones ofrecidas</p>
+    <p>Ejemplo: en la pregunta de miembros del Directorio con experiencia en especialidades (Control Interno, Ciberseguridad, etc.) si se da el caso en el que no exista ningún miembro del directorio con experiencia en alguna de ellas.</p>
+    <p>Esto se ponderaría con valor cero o inluso con un valor negativo</p>
     <br>
-    <p>Texto introductorio/aclaratorio sobre las preguntas a contestar.  Presentación de ayudas</p>
-    <h1><details><summary>Texto que requiera algun tipo de aclaración</summary>
+  
+    <br><br>
+    <p><strong>Opciones adicionales a SI/NO.</strong></p>
+    <p>¿Se debería considerar para los casos en que la respuesta presente algún tipo de gradualidad?.   Se podría necesitar cuando la pregunta incluya alguna valoración subjetiva, tal como: "Existe capacitación adecuada....".  El concepto de "adecuado" es subjetivo y admitiría como respuesta un valor porcentual, o valores del tipo:  muy completo, completo, parcial, escaso, nulo, etc.  Cada una de ellas tendría su ponderación.</p>
+    <p>Como ejemplo adicional se agregó un comentario en la sección de Cumplimiento y Control, con respecto al Auditor</p>
+    <br><br>
+
+    <p><strong>Texto introductorio/aclaratorio sobre las preguntas a contestar.  Presentación de ayudas</strong></p>
+    <p>Disponemos de opciones para incluir cuando corresponda, algún tipo de aclaración o mensaje informativo.
+    <p>A continuación hay un par de ejemplos.</p>
+    <br>
+    <h5><details><summary>Texto que requiera algun tipo de aclaración</summary>
       <p style="font-size: 15px; color:gray; font-weight: 100; ">Esta es una opción para incorporar alguna ayuda en linea asociada a un dato en particular.</p>
-    </details></h1>
+    </details></h5>
 
     <br>
     <p>Opcion con un botón de ayuda</p>
 
-    <button onclick="alert('Otra opcion para mostrar una ventana ante el click en un botón de ayuda o con el texto que se defina.  Pude ser del largo deseado. \n\n Admite salto de renglones \n\n Se le pude dar algún formato en especial')">Ayuda</button>
-
+    <button onclick="alert('Otra opcion para mostrar una ventana ante el click en un botón de ayuda o con el texto que se defina.  Puede ser tan extenso como se requiera. \n\n Admite salto de renglones \n\n No admite formato enriquecido (bold, italica, etc.)') ">Click aca</button>
     <br><br>
-    <p>Tipos de respuesta:</p>
-    <p>PREGUNTA: Habría que contemplar como respuesta un valor porcentual (ej de 0 a 100) como grado de cumplimiento o satisfacción?  - VER la sección de CUMPLIMIENTO Y CONTROL.</p>
-    <p>Se aplicaría en el caso de respuestas que requieran más amplitud que las de SI/NO, en casos que pueda existir alguna gradualidad, por ejemplo:  "Existe capacitación 'adecuada'...."</p>  Como el concepto de adecuado es subjetivo, se podría contemplar un porcentual o niveles del tipo: muy completo, completo, parcial, escaso, nulo"
-    <br><br>
-
-
     <hr>
     <p><strong>Desarrollo de la encuesta</strong></p>
     <hr>
@@ -109,10 +114,10 @@
           <label class="first-radio"><input type="radio" name="opcion" value="3">1</label>
           <label><input type="radio" name="opcion" value="4">2</label>
           <details><summary></summary>
-            <p style="font-size: 15px; color:red; font-weight: 100; ">Esta es una opción para incorporar algun texto de ayuda u orientación en línea asociada a un dato en particular.</p>
+            <p style="font-size: 15px; color:red; font-weight: 100; ">¿No puede haber más de 2 mujeres en el Directorio?</p>
           </details>
         </li>
-        <li>El Directorio posee por lo menos un miembro con experiencia en (marcar todas las que correspondan)</li>
+        <li>El Directorio posee por lo menos un miembro con experiencia en (marcar todas las que correspondan):</li>
         <ul>
             <li><input id="uno" type="checkbox"><label class="check" for="uno">Transformación digital/Change Management</label></li>
             <li><input id="dos" type="checkbox"><label class="check" for="dos">Control Interno</label></li>
@@ -154,7 +159,7 @@
           <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
           <label><input type="radio" name="opcion" value="4">No</label>
         </li>
-        <li>Las rteuniones de Directorio se documentan en actas y son previamente aprobadas por los directores
+        <li>Las reuniones de Directorio se documentan en actas y son previamente aprobadas por los directores
           <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
           <label><input type="radio" name="opcion" value="4">No</label>
         </li>
@@ -163,7 +168,7 @@
     <h1>Estructura organizacional.</h1>
     <br>
     <ul class="listas">    
-       <li>El Directorio ha conformado una estructura donde existen los siguientes roles efectivos (marcar todos los que correspondan)</li>
+       <li>El Directorio ha conformado una estructura donde existen los siguientes roles efectivos (marcar todos los que correspondan):</li>
        <ul>
         <li><input id="uno" type="checkbox"><label class="check" for="uno">Chief Executive Officer</label></li>
         <li><input id="uno" type="checkbox"><label class="check" for="uno">Chief Operating Officer</label></li>
@@ -183,7 +188,7 @@
     <h1>El Directorio y su articulación con las Gerencias.</h1>
     <br>
     <ul class="listas">    
-       <li>Los miembros del Directorio (y en su caso el Advisory Board) tienen acceso a:(marcar todos los que correspondan)</li>
+       <li>Los miembros del Directorio (y en su caso el Advisory Board) tienen acceso a (marcar todos los que correspondan):</li>
        <ul>
 
         <li><input id="uno" type="checkbox"><label class="check" for="uno">Comité de Alta Gerencia</label></li>
@@ -383,7 +388,7 @@
       <li><label for="porcentaje">Grado (%) de satisfacción con el desempeño del profesional a cargo del departamento de auditoría (0 a 100):</label> 
         <label><input type="range" name="opcion" min="0" max="100"></label>
       </li>
-      <p><strong><em>"El que estaba antes era muy bueno, pero se jubiló.  Éste es el que conseguimos pero no es lo mismo....</em></strong></p>
+      <p><strong><em>"El que estaba antes era muy bueno, pero se jubiló.  Éste es el que conseguimos pero no es lo mismo...."</em></strong></p>
       <br>
 
       <li>El auditor interno reporta al Presidente del comité de Auditoría
