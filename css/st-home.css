@@ -153,3 +153,37 @@ ul ul{
   display: inline-block;
   margin-left: 5px; /* Espaciado desde el texto al primer boton checkbox */
 }
+
+.centrado-flex {
+  margin: 20px;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  /*align-items: center; Centra verticalmente*/
+  /*height: 100vh; /* Altura completa de la ventana del navegador */
+}
+
+#boton-enviar {
+  background-color: #4CAF50; /* Color de fondo */
+  color: white; /* Color de texto */
+  padding: 12px 24px; /* Espaciado alrededor del texto */
+  border: none; /* Sin bordes */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor en forma de mano al pasar el mouse */
+  transition: all 0.3s; /* Transición suave para los cambios */
+  font-size: 16px; /* Tamaño de la fuente */
+  font-weight: bold; /* Negrita */
+}
+
+#boton-enviar:hover {
+  background-color: #45a049; /* Color de fondo al pasar el mouse */
+}
+
+#boton-enviar:focus {
+  outline: none; /* Elimina el contorno al enfocar */
+  box-shadow: 0 0 8px rgba(0, 255, 0, 0.6); /* Sombra de foco */
+}
+
+ol{
+  margin-left:50px;
+  padding: auto;
+}

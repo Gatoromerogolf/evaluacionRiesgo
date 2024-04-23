@@ -55,11 +55,11 @@ function calculaResultados(){
 }
 
 
-function mostrarOcultarLineas(idLinea, valor) {
-  const linea = document.getElementById(idLinea);
-  if (valor === "1") {
-      linea.style.display = "block"; // Mostrar la línea si el valor es "1"
-  } else {
-      linea.style.display = "none"; // Ocultar la línea si el valor es diferente de "1"
-  }
-}
+// function mostrarOcultarLineas(idLinea, valor) {
+//   const linea = document.getElementById(idLinea);
+//   if (valor === "1") {
+//       linea.style.display = "block"; // Mostrar la línea si el valor es "1"
+//   } else {
+//       linea.style.display = "none"; // Ocultar la línea si el valor es diferente de "1"
+//   }
+// }
