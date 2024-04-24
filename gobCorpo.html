@@ -390,11 +390,11 @@
         <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
         <label><input type="radio" name="opcion" value="4">No</label>
       </li>
-      <p>opción:</p>
       <li><label for="porcentaje">Grado (%) de satisfacción con el desempeño del profesional a cargo del departamento de auditoría (0 a 100):</label> 
-        <label><input type="range" name="opcion" min="0" max="100"></label>
+        <label><input type="range" id="rangoRange" name="opcion" min="0" max="100" step="10"></label>
+        <span id="valorRange">%</span>
       </li>
-      <p><strong><em>"El que estaba antes era muy bueno, pero se jubiló.  Éste es el que conseguimos pero no es lo mismo...."</em></strong></p>
+      <p><strong><em style="font-size: smaller;">"El que estaba antes era muy bueno, pero se jubiló.  Éste es el que conseguimos, pero no es lo mismo...."</em></strong></p>
       <br>
 
       <li>El auditor interno reporta al Presidente del comité de Auditoría

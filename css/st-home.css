@@ -41,6 +41,14 @@ header nav ul li a{
   font-weight: bold;
 }
 
+#tablaIndice {
+  text-decoration: none;
+  padding:2px ;
+  display:block;
+  font-family:'Roboto', sans-serif;
+  font-size:16px;
+}
+
 header nav ul li a:hover{
   background-color:#75ACEC;
 }
@@ -183,7 +191,40 @@ ul ul{
   box-shadow: 0 0 8px rgba(0, 255, 0, 0.6); /* Sombra de foco */
 }
 
-ol{
+/* ol{
   margin-left:50px;
   padding: auto;
+} */
+
+
+#olIndice {
+  font-family:'Roboto', sans-serif;
+  list-style-type: decimal; /* Cambia el estilo del marcador */
+  font-size: 17px; /* Tamaño del texto */
+  color: #333; /* Color del texto */
+  margin-left: auto; /* Centra horizontalmente */
+  width: 90%; /* Ajusta el ancho de la lista */
+}
+
+#olIndice li {
+  margin-bottom: 8px; /* Espacio entre elementos de la lista */
+}
+
+#olIndice a {
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  color: #0066cc; /* Color del enlace */
+}
+
+#olIndice a:hover {
+  text-decoration: underline; /* Subrayado al pasar el ratón sobre el enlace */
+}
+
+
+li a {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: separate; /* Para que el espaciado se aplique */
+  border-spacing: 10px; /* Espacio entre filas y columnas */
 }

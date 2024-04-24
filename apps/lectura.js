@@ -55,11 +55,15 @@ function calculaResultados(){
 }
 
 
-function mostrarOcultarLineas(idLinea, valor) {
-  const linea = document.getElementById(idLinea);
-  if (valor === "1") {
-      linea.style.display = "block"; // Mostrar la línea si el valor es "1"
-  } else {
-      linea.style.display = "none"; // Ocultar la línea si el valor es diferente de "1"
-  }
-}
+// Obtener referencia al input y al span
+var rango = document.getElementById('rangoRange');
+var valorSpan = document.getElementById('valorRange');
+
+// Mostrar el valor inicial
+valorSpan.textContent = rango.value;
+
+// Agregar un evento 'input' al input tipo range
+rango.addEventListener('input', function() {
+  // Actualizar el texto del span con el valor seleccionado
+  valorSpan.textContent = rango.value;
+});

@@ -49,9 +49,10 @@
   <section class="gobCorpo">
     <p><strong>Texto introductorio/explicatorio de lo que se tiene que completar....</strong></p>
     <br>
-    <h1>Indice</h1>
-    <ol>
-        <li>La composición y responsabilidades del Directorio</li>
+    <h1>Gobierno Corporativo.  Índice.</h1>
+    <ol id="olIndice">
+      <br>
+        <li><a href="#uno">La composición y responsabilidades del Directorio</li></a>
         <li>Estructura organizacional</li>
         <li>El Directorio y su articulación con las Gerencias</li>
         <li>Comités del Directorio</li>
@@ -67,11 +68,56 @@
         <li>Presidente del Directorio</li>
         <li>Secretaría del Directorio</li>
     </ol>
+    <br>
+    
+    <table id="tablaIndice">
+  
+      <tr>
+        <th>#</th>
+        <th style="width: 400px;">Sección</th>
+        <th>Cumplido.</th>
+      </tr>
+  
+      <tr>
+        <td>1.</td>
+        <td style="width: 400px;">La composición y responsabilidades del Directorio</td>
+        <td style="text-align: center;"><img src="img/guante.png" width="20px"></td>
+      </tr>
+      <tr>
+        <td>2.</td>
+        <td style="width: 400px;">Estructura organizacional</td>
+        <td style="text-align: center"><img src="img/guante.png" width="20px"></td>
+      </tr> 
+      <tr>
+        <td>3.</td>
+        <td>El Directorio y su articulación con las Gerencias</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>4.</td>
+        <td>Comités del Directorio</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>5.</td>
+        <td>Comité de Auditoría</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>6.</td>
+        <td>Información para el Directorio</td>
+        <td></td>
+      </tr> 
+
+    </table>
     <br><br>
+
+
+
     <hr>
     <form id="formulario">
     <br>
-    <h1>La composición y responsabilidades del Directorio</h1>
+    <h1 id="uno">La composición y responsabilidades del Directorio</h1>
     <br>
     <ul class="listas">
         <li class="radiohori">Cantidad de directores que componen el Directorio  :
@@ -116,6 +162,7 @@
           <label class="first-radio"><input type="radio" name="gp-1-5" value="1">1</label>
           <label><input type="radio" name="gp-1-5" value="2">2</label>
           <label><input type="radio" name="gp-1-5" value="3">3</label>
+          <label id="linea5" style="display: none"><input type="radio" name="gp-1-4" value="4">4 o más</label>
         </li>
         <li>Directores mujeres
           <label class="first-radio"><input type="radio" name="gp-1-6" value="1">1</label>
@@ -189,6 +236,7 @@ function mostrarOcultar(valorSeleccionado) {
     document.getElementById('linea-21').style.display = 'none';
     document.getElementById('linea-31').style.display = 'none';
     document.getElementById('linea4').style.display = 'none';
+    document.getElementById('linea5').style.display = 'none';
     document.getElementById('linea-2').style.display = 'block';
     document.getElementById('linea-3').style.display = 'block';
 
@@ -198,6 +246,7 @@ function mostrarOcultar(valorSeleccionado) {
     document.getElementById('linea-21').style.display = 'block';
     document.getElementById('linea-31').style.display = 'block';
     document.getElementById('linea4').style.display = 'block';
+    document.getElementById('linea5').style.display = 'block';
     document.getElementById('linea-2').style.display = 'none';
     document.getElementById('linea-3').style.display = 'none';
 
