@@ -41,19 +41,59 @@ header nav ul li a{
   font-weight: bold;
 }
 
+header nav ul li a:hover{
+    background-color:#75ACEC;
+  }
+/*--------------    TABLA DE INDICE ------------*/
+.contenedorTabla{
+  margin: 0 auto; /* Centra horizontalmente el contenedor */
+  width: 75%; /* Ajusta el ancho del contenedor según sea necesario */    
+}
+
 #tablaIndice {
   text-decoration: none;
   padding:2px ;
   display:block;
   font-family:'Roboto', sans-serif;
-  font-size:16px;
+  font-size: 18px; /* Tamaño del texto */
+  color: #333; /* Color del texto */
+  margin: auto; /* Centra horizontalmente */
 }
 
-header nav ul li a:hover{
-  background-color:#75ACEC;
+
+#tablaIndice tr{
+    height: 40px;
 }
 
-/*   ARTICULOS  */
+
+#tablaIndice tr td{
+    border-bottom: 1px dotted #333;  
+}
+
+td a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #0066cc; /* Color del enlace */
+  }
+
+#tablaIndice tr td img{
+    width: 18px;  
+}
+
+td a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón sobre el enlace */
+  }
+
+.seccionTabla{
+    width: 600px;
+}
+  
+.columnasTabla{
+    width: 80px;
+    text-align: center;
+}
+
+
+/*-----------------   ARTICULOS  --------*/
 
 .main .articles{
   width:68.5%;
@@ -111,7 +151,7 @@ aside{
 
 /*  GOB CORPORATIVO  */
 .listas {
-  margin-left: 50px;
+  margin-left: 30px;
   font-family:'Roboto', sans-serif;
   font: size 16px;
   list-style-type: square;
@@ -170,6 +210,8 @@ ul ul{
   /*height: 100vh; /* Altura completa de la ventana del navegador */
 }
 
+/* -----------BOTON ENVIAR ------------------------*/
+
 #boton-enviar {
   background-color: #4CAF50; /* Color de fondo */
   color: white; /* Color de texto */
@@ -182,6 +224,8 @@ ul ul{
   font-weight: bold; /* Negrita */
 }
 
+
+
 #boton-enviar:hover {
   background-color: #45a049; /* Color de fondo al pasar el mouse */
 }
@@ -191,50 +235,81 @@ ul ul{
   box-shadow: 0 0 8px rgba(0, 255, 0, 0.6); /* Sombra de foco */
 }
 
+/* -----------BOTON BORRAR ------------------------*/
 
-/* ol{
-  margin-left:50px;
-  padding: auto;
-} */
-
-
+#boton-borrar {
+    background-color: #fe0314; /* Color de fondo */
+    color: white; /* Color de texto */
+    padding: 12px 24px; /* Espaciado alrededor del texto */
+    border: none; /* Sin bordes */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor en forma de mano al pasar el mouse */
+    transition: all 0.3s; /* Transición suave para los cambios */
+    font-size: 16px; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
+  }
+  
+  #boton-borrar:hover {
+    background-color: #b6041c; /* Color de fondo al pasar el mouse */
+  }
+  
+  #boton-borrar:focus {
+    outline: none; /* Elimina el contorno al enfocar */
+    box-shadow: 0 0 8px rgba(247, 6, 14, 0.6); /* Sombra de foco */
+  }
+/*----------- LISTA ORDENADA --------------------*/
+/* 
 #olIndice {
   font-family:'Roboto', sans-serif;
-  list-style-type: upper-roman; /* Cambia el estilo del marcador */
   font-size: 17px; /* Tamaño del texto */
   color: #333; /* Color del texto */
-  margin-left: auto; /* Centra horizontalmente */
-  width: 90%; /* Ajusta el ancho de la lista */
-}
-
-#olIndice li {
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-    padding: 10px;
+  margin: auto; /* Centra horizontalmente */
+  width: 70%; /* Ajusta el ancho de la lista */
+/* }
+.olIndiceItem{
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 10px 0; /* Ajusta el espacio entre las filas */
+/* } */
+/* #olIndice li {
+    border: 1px dotted #ccc;
+    margin-bottom: 5px;
+    padding: 5px;
     display: flex; /* Utilizamos flexbox para el diseño de las columnas */
-    flex-wrap: wrap; /* Permite que las columnas se ajusten al tamaño del conte
+    /* flex-wrap: wrap; Permite que las columnas se ajusten al tamaño del conte */
+    /* justify-content: space-between;
+    /* justify-content:left; */
+    /* align-items: center; */ 
+
+
     /* margin-bottom: 8px; /* Espacio entre elementos de la lista */
-}
 
-.olIndiceColumna{
-  width:25%;
-}
+/* .numeroRomano{
+    margin-right: 15px; /* Ajusta el espacio entre el número romano y el texto */
+    /* font-weight: bold; /* Hace que el número romano sea más visible */  
+/* } */
 
-#olIndice a {
+/* .olIndiceColumna1{
+    width:380px; */
+    /* flex-grow: 1; /* Permite que la primera columna crezca para ocupar el espacio restante */
+    /*margin-right: 20px; Espacio entre la primera columna y las otras columnas }*/
+
+
+/* .olIndiceColumna{
+    width:10px;
+    text-align: center;
+  }   */
+
+/* #olIndice a {
   text-decoration: none; /* Elimina el subrayado de los enlaces */
-  color: #0066cc; /* Color del enlace */
-}
+  /* color: #0066cc; Color del enlace */
+/* } */ 
 
-#olIndice a:hover {
-  text-decoration: underline; /* Subrayado al pasar el ratón sobre el enlace */
-}
+/* #olIndice a:hover {
+  text-decoration: underline; /* Subrayado al pasar el ratón sobre el enlace
+}  */
 
-
+/* 
 li a {
   text-decoration: none;
-}
-
-table {
-  border-collapse: separate; /* Para que el espaciado se aplique */
-  border-spacing: 10px; /* Espacio entre filas y columnas */
-}
+} */
