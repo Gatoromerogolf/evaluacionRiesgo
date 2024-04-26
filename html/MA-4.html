@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación de riesgos</title>
+    <link href="../css/st-homePrueba.css" rel="stylesheet">
+    <!-- <link href="css/st-gobCorpo.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- anulado hasta que se necesite
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+    <script>
+      $(function () {
+        $("#header").load("encabezado.html");
+        $("#footer").load("piepagina.html");
+      });
+    </script> -->
+
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="img/bdtancho.png" width="100%" 
+      alt="">
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="Menu-A.html">Gobierno Corporativo</a></li>
+        <li><a href="../index.html">Opcion 2</a></li>
+        <li><a href="../index.html">Opcion 3</a></li>
+        <li><a href="../index.html">Opcion 4</a></li>
+        <li><a href="../index.html">Opcion 5</a></li>
+        <li><a href="../index.html">Opcion 6</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <!-- <div id="header-placeholder"></div> -->
+  <!-- <div id="header"></div>    -->
+
+  <section class="main">
+    <section class="gobCorpo">
+      <p><strong>Introducción</strong></p>
+      <br>
+      <h1><a href="Menu-A.html">A - Gobierno Corporativo.  Autoevaluación.</a></h1>
+  
+      <br>
+  
+    <hr>
+
+    <form id="formulario">
+    <br>
+      <h1>IV - Comités del Directorio.</h1>
+      <br>
+      <ul class="listas">    
+        <li>Existe un Comité de Auditoría que cuenta con la participación del auditor interno:
+          <label class="first-radio"><input type="radio" name="grupo-001-001" value="3">Si</label>
+          <label><input type="radio" name="grupo-001-001" value="4">No</label>
+        </li>
+        <li>La estructura de Comités del Directorio está documentada:
+          <label class="first-radio"><input type="radio" name="grupo-001-002" value="3">Si</label>
+          <label><input type="radio" name="grupo-001-002" value="4">No</label>
+        </li>
+        <li>Hay un Comité de nominaciones y sucesiones:
+          <label class="first-radio"><input type="radio" name="grupo-001-003" value="3">Si</label>
+          <label><input type="radio" name="grupo-001-003" value="4">No</label>
+        </li>
+        <li>Hay un Comité de compensaciones:
+          <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+          <label><input type="radio" name="opcion" value="4">No</label>
+        </li>
+        <li>Hay un Comité de Tecnologías de la Información:
+          <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+          <label><input type="radio" name="opcion" value="4">No</label>
+        </li>
+        <li>Hay un Comité de Riesgos:
+          <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+          <label><input type="radio" name="opcion" value="4">No</label>
+        </li>
+        <li>Cada Comité está compuesto por al menos un director independiente:
+          <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+          <label><input type="radio" name="opcion" value="4">No</label>
+        </li>
+        <li>Cada Comité envía informes al Directorio:
+          <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+          <label><input type="radio" name="opcion" value="4">No</label>
+        </li>
+        <li>Frecuencia de las reuniones del</li>
+          <ul>
+            <li>Comité de Alta Gerencia:
+              <label class="first-radio"><input type="radio" name="opcion" value="3">Semanal</label>
+              <label><input type="radio" name="opcion" value="4">Quincenal</label>
+              <label><input type="radio" name="opcion" value="4">Mensual</label>
+            </li>
+            <li>Comité de Auditoría
+              <label class="first-radio"><input type="radio" name="opcion" value="3">Quincenal</label>
+              <label><input type="radio" name="opcion" value="4">Mensual</label>
+            </li>
+            <li>Comité de Nominaciones
+              <label class="first-radio"><input type="radio" name="opcion" value="3">Ad-hoc</label>
+              <label style="color: red" class="first-radio"><input type="radio" name="opcion" value="3"> ????????</label>
+            </li>
+            <li>Comité de Compensaciones
+              <label class="first-radio"><input type="radio" name="opcion" value="3">Ad-hoc</label>
+              <label class="first-radio"><input type="radio" name="opcion" value="3">Anual</label>
+            </li>
+            <li>Comité de Tecnologías de la Información
+              <label class="first-radio"><input type="radio" name="opcion" value="3">Mensual</label>
+              <label style="color: red" class="first-radio"><input type="radio" name="opcion" value="3"> ????????</label>
+            </li>
+            <li>Comité de Riesgos
+              <label class="first-radio"><input type="radio" name="opcion" value="3">Mensual</label>
+              <label style="color: red" class="first-radio"><input type="radio" name="opcion" value="3"> ????????</label>
+            </li>
+          </ul>
+      </ul>
+  
+
+      <div class="centrado-flex">
+        <button type="submit" id="boton-enviar">Enviar</button>
+      </div>
+  
+      <div class="centrado-flex">
+        <button type="button" id="boton-borrar" onclick="limpiarSelecciones()">Limpiar selecciones</button>
+      </div>
+  
+    </form>
+      </section>
+    </section>
+  
+    <br>
+    <section>
+    <footer>
+      <hr>
+      <div class="footer">
+      <p>Contacto</p>
+      <a href="mailto:ruben.e.garcia@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="tel:+5491141778519"><i class="fas fa-phone"></i></a>
+      <a href="https://wa.me/5491141778519?text=Hola, necesito contactarnos.   Gracias." target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </p>
+      </div>
+      <p>Derechos reservados. &copy;2024 - BDT</p>
+      <br>
+      <!-- <p>Autor de la pagina</p> -->
+      <!-- <div id="footer"></div> -->
+    </footer>
+    </section>
+  
+  </body>
+  
+    <script src="datos/tabla01.js"></script>  
+    <script src="datos/tabla02.js"></script>  
+    <script src="apps/lectura.js"></script>    
+  
+  </html>
