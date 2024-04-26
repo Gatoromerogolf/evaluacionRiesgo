@@ -53,6 +53,7 @@ function obtenerValoresSeleccionados() {
       alert(`No selecciono lo del AB en la fila 11`);
     }
   }
+  console.log (`respuestas con 7 y 11 ${respuestas}`)
   return respuestas; // Devuelve el arreglo si necesitas hacer algo más con él
 }
 
@@ -138,6 +139,9 @@ function obtenerCheckboxSeleccionados() {
   }
 
   // acumula los puntos por los checkbox seleccionados
+  if (!puntajesIndividuales[6]) puntajesIndividuales[6] = []; // Asegurar que existe el arreglo antes de asignar valores
+
+  puntajesIndividuales[6][2] = 0;
   for (i = 0; i < checkboxesSeleccionados.length; i++) {
     let indicejota = checkboxesSeleccionados[i] - 1;
     console.log(`indicejota ${indicejota} check ${checkboxesSeleccionados[i]}`);
@@ -146,8 +150,10 @@ function obtenerCheckboxSeleccionados() {
     // console.log (`tabla ${tabla[6][0]}`)
     valores += tabla[6][checkboxesSeleccionados[i] - 1];
 
-      puntajesIndividuales[6][0] = 6;
-      puntajesIndividuales[6][2] += tabla[6][checkboxesSeleccionados[i] - 1];
+    // if (!puntajesIndividuales[6]) puntajesIndividuales[6] = []; // Asegurar que existe el arreglo antes de asignar valores
+    puntajesIndividuales[6][0] = 7;
+    puntajesIndividuales[6][1] = checkboxesSeleccionados.join(', '); //Se convierte el array checkboxesSeleccionados en una cadena y luego se asigna esa cadena
+    puntajesIndividuales[6][2] += tabla[6][checkboxesSeleccionados[i] - 1]
       console.log(
         `valor despues calculo: ${valores} , ${checkboxesSeleccionados[i]}`)
     ;
@@ -182,7 +188,9 @@ document
     alert(
       `Seleccion: ${respuestas} \n valores: ${valores} \n máximo: ${maximo} \n porcentaje: ${porcientoFormateado}%`
     );
-
+    console.log (`Suma puntos ${valores},
+                 valor máximo: ${maximo},
+                 porcentaje ${porcientoFormateado}`);
     console.table(puntajesIndividuales);
   });
 
