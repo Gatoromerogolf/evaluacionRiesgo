@@ -48,6 +48,31 @@ header nav ul li a{
 header nav ul li a:hover{
     background-color:#75ACEC;
   }
+
+/* ---------------  pagina Index --------------------*/
+
+.olIndex {
+  margin-left: 40px; /* Centra horizontalmente el contenedor */
+
+}
+
+/* --------------- ICONOS AVANCE  RETROCESO ----------*/
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 10px; /* Espacio entre las imágenes */
+}
+
+.nav-icons img {
+  width: 40px; /* Ajusta el tamaño de las imágenes según necesites */
+  height: auto;
+}
 /*--------------    TABLA DE INDICE ------------*/
 .contenedorTabla{
   margin: 0 auto; /* Centra horizontalmente el contenedor */
@@ -103,6 +128,7 @@ td a:hover {
   width:68.5%;
   float:left;
   margin-right: 1.5%;
+
 }
 
 .main .articles article{
@@ -110,7 +136,7 @@ td a:hover {
   background:#fff;
   margin-bottom: 20px;
   font-family:'Lato', Tahoma, Geneva, Verdana, sans-serif;
-  font-size:12px;
+  font-size:14px;
   font-weight: normal;
 }
 aside{
@@ -177,13 +203,6 @@ ul ul{
   margin-left: 50px;
 }
 
-/* .radiohori {
-  display: flex;
-  /*display: inline-block;
-  margin-right: 20px;
-} */
-
-
 .listas li {
   display: flex;
   align-items: center;
@@ -228,8 +247,6 @@ ul ul{
   font-weight: bold; /* Negrita */
 }
 
-
-
 #boton-enviar:hover {
   background-color: #45a049; /* Color de fondo al pasar el mouse */
 }
@@ -262,58 +279,4 @@ ul ul{
     box-shadow: 0 0 8px rgba(247, 6, 14, 0.6); /* Sombra de foco */
   }
 /*----------- LISTA ORDENADA --------------------*/
-/* 
-#olIndice {
-  font-family:'Roboto', sans-serif;
-  font-size: 17px; /* Tamaño del texto */
-  color: #333; /* Color del texto */
-  margin: auto; /* Centra horizontalmente */
-  width: 70%; /* Ajusta el ancho de la lista */
-/* }
-.olIndiceItem{
-    display: flex;
-    align-items: center; /* Centra verticalmente los elementos */
-    padding: 10px 0; /* Ajusta el espacio entre las filas */
-/* } */
-/* #olIndice li {
-    border: 1px dotted #ccc;
-    margin-bottom: 5px;
-    padding: 5px;
-    display: flex; /* Utilizamos flexbox para el diseño de las columnas */
-    /* flex-wrap: wrap; Permite que las columnas se ajusten al tamaño del conte */
-    /* justify-content: space-between;
-    /* justify-content:left; */
-    /* align-items: center; */ 
 
-
-    /* margin-bottom: 8px; /* Espacio entre elementos de la lista */
-
-/* .numeroRomano{
-    margin-right: 15px; /* Ajusta el espacio entre el número romano y el texto */
-    /* font-weight: bold; /* Hace que el número romano sea más visible */  
-/* } */
-
-/* .olIndiceColumna1{
-    width:380px; */
-    /* flex-grow: 1; /* Permite que la primera columna crezca para ocupar el espacio restante */
-    /*margin-right: 20px; Espacio entre la primera columna y las otras columnas }*/
-
-
-/* .olIndiceColumna{
-    width:10px;
-    text-align: center;
-  }   */
-
-/* #olIndice a {
-  text-decoration: none; /* Elimina el subrayado de los enlaces */
-  /* color: #0066cc; Color del enlace */
-/* } */ 
-
-/* #olIndice a:hover {
-  text-decoration: underline; /* Subrayado al pasar el ratón sobre el enlace
-}  */
-
-/* 
-li a {
-  text-decoration: none;
-} */
