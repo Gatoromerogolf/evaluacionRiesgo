@@ -53,54 +53,54 @@ function obtenerValoresSeleccionados() {
       alert(`No selecciono lo del AB en la fila 11`);
     }
   }
-  console.log (`respuestas con 7 y 11 ${respuestas}`)
+  console.log(`respuestas con 7 y 11 ${respuestas}`)
   return respuestas; // Devuelve el arreglo si necesitas hacer algo más con él
 }
 
-function validarSeleccionGrupos() {
-  var grupos = [
-    "A-I-1",
-    "A-I-2",
-    "A-I-3",
-    "A-I-4",
-    "A-I-5",
-    "A-I-6",
-    "A-I-8",
-    "A-I-9",
-    "A-I-10",
-    "A-I-12",
-    "A-I-13",
-    "A-I-14",
-    "A-I-15",
-    "A-I-16",
-    "A-I-17"
-  ];
+// function validarSeleccionGrupos() {
+//   var grupos = [
+//     "A-I-1",
+//     "A-I-2",
+//     "A-I-3",
+//     "A-I-4",
+//     "A-I-5",
+//     "A-I-6",
+//     "A-I-8",
+//     "A-I-9",
+//     "A-I-10",
+//     "A-I-12",
+//     "A-I-13",
+//     "A-I-14",
+//     "A-I-15",
+//     "A-I-16",
+//     "A-I-17"
+//   ];
 
-  var indiceFilas = 0;
-  var respuestas = [];
-  var completado = true;
+//   var indiceFilas = 0;
+//   var respuestas = [];
+//   var completado = true;
 
-  grupos.forEach((nombreGrupo) => {
-    indiceFilas++;
-    const grupo = document.querySelector(
-      `input[name="${nombreGrupo}"]:checked`
-    );
-    if (!grupo) {
-      alert(`Por favor seleccionar una opción en la fila ${indiceFilas}`);
-      completado = false;
-    } else {
-      respuestas.push(grupo.value);
-    }
-  });
+//   grupos.forEach((nombreGrupo) => {
+//     indiceFilas++;
+//     const grupo = document.querySelector(
+//       `input[name="${nombreGrupo}"]:checked`
+//     );
+//     if (!grupo) {
+//       alert(`Por favor seleccionar una opción en la fila ${indiceFilas}`);
+//       completado = false;
+//     } else {
+//       respuestas.push(grupo.value);
+//     }
+//   });
 
-  if (completado) {
-    console.log("Todas las selecciones completadas:", respuestas);
-    // Aquí puedes proceder con la siguiente parte de tu lógica de aplicación, como enviar el formulario, etc.
-  } else {
-    console.log("No todas las selecciones fueron completadas");
-    // Puedes decidir dejar que el usuario corrija o hacer alguna otra acción aquí.
-  }
-}
+//   if (completado) {
+//     console.log("Todas las selecciones completadas:", respuestas);
+//     // Aquí puedes proceder con la siguiente parte de tu lógica de aplicación, como enviar el formulario, etc.
+//   } else {
+//     console.log("No todas las selecciones fueron completadas");
+//     // Puedes decidir dejar que el usuario corrija o hacer alguna otra acción aquí.
+//   }
+// }
 
 function obtenerCheckboxSeleccionados() {
   // Obtener todos los elementos checkbox
@@ -146,17 +146,14 @@ function obtenerCheckboxSeleccionados() {
     let indicejota = checkboxesSeleccionados[i] - 1;
     console.log(`indicejota ${indicejota} check ${checkboxesSeleccionados[i]}`);
     console.log(valores);
-    // console.log (`check selec ${checkboxesSeleccionados[i] -1}`);
-    // console.log (`tabla ${tabla[6][0]}`)
     valores += tabla[6][checkboxesSeleccionados[i] - 1];
 
-    // if (!puntajesIndividuales[6]) puntajesIndividuales[6] = []; // Asegurar que existe el arreglo antes de asignar valores
     puntajesIndividuales[6][0] = 7;
     puntajesIndividuales[6][1] = checkboxesSeleccionados.join(', '); //Se convierte el array checkboxesSeleccionados en una cadena y luego se asigna esa cadena
     puntajesIndividuales[6][2] += tabla[6][checkboxesSeleccionados[i] - 1]
-      console.log(
-        `valor despues calculo: ${valores} , ${checkboxesSeleccionados[i]}`)
-    ;
+    console.log(
+      `valor despues calculo: ${valores} , ${checkboxesSeleccionados[i]}`)
+      ;
   }
 }
 
@@ -176,23 +173,23 @@ function limpiarSelecciones() {
   });
 }
 
-document
-  .getElementById("formulario")
-  .addEventListener("submit", function (event) {
-    valores = 0;
-    event.preventDefault(); // Prevenir el envío del formulario
-    obtenerValoresSeleccionados(); // Llamar a la función al enviar el formulario
-    // obtenerCheckboxSeleccionados();
-    porcientoFormateado = calculaResultados();
-    obtenerCheckboxSeleccionados();
-    alert(
-      `Seleccion: ${respuestas} \n valores: ${valores} \n máximo: ${maximo} \n porcentaje: ${porcientoFormateado}%`
-    );
-    console.log (`Suma puntos ${valores},
-                 valor máximo: ${maximo},
-                 porcentaje ${porcientoFormateado}`);
-    console.table(puntajesIndividuales);
-  });
+// document
+//   .getElementById("formulario")
+//   .addEventListener("submit", function (event) {
+//     valores = 0;
+//     event.preventDefault(); // Prevenir el envío del formulario
+//     obtenerValoresSeleccionados(); // Llamar a la función al enviar el formulario
+//     // obtenerCheckboxSeleccionados();
+//     porcientoFormateado = calculaResultados();
+//     obtenerCheckboxSeleccionados();
+//     alert(
+//       `Seleccion: ${respuestas} \n valores: ${valores} \n máximo: ${maximo} \n porcentaje: ${porcientoFormateado}%`
+//     );
+//     console.log (`Suma puntos ${valores},
+//                  valor máximo: ${maximo},
+//                  porcentaje ${porcientoFormateado}`);
+//     console.table(puntajesIndividuales);
+//   });
 
 function calculaResultados() {
   tabla = respuestas[0] == 1 ? tabla01 : tabla02;
@@ -217,4 +214,79 @@ function calculaResultados() {
   }
   const porcientoFormateado = ((valores / maximo) * 100).toFixed(2);
   return porcientoFormateado;
+}
+
+
+
+document
+  .getElementById("formulario")
+  .addEventListener("submit", function (event) {
+    valores = 0;
+    event.preventDefault(); // Prevenir el envío del formulario
+    obtenerValoresSeleccionados(); // Llamar a la función al enviar el formulario
+    // obtenerCheckboxSeleccionados();
+    porcientoFormateado = calculaResultados();
+    obtenerCheckboxSeleccionados();
+    porcientoFormateado = ((valores / maximo) * 100).toFixed(2);
+    alert(
+      `Seleccion: ${respuestas} \n valores: ${valores} \n máximo: ${maximo} \n porcentaje: ${porcientoFormateado}%`
+    );
+    console.log(`Suma puntos ${valores},
+                 valor máximo: ${maximo},
+                 porcentaje ${porcientoFormateado}`);
+    console.table(puntajesIndividuales);
+
+
+    // Supongamos que calculas o recibes algún valor 'nuevoValor'
+    let nuevoValor = porcientoFormateado; // Función hipotética que genera un valor
+
+    // Guardar el valor en LocalStorage
+    localStorage.setItem('miValor', JSON.stringify(nuevoValor));
+
+  });
+
+
+function validarSeleccionGrupos() {
+  var grupos = [
+    "A-I-1",
+    "A-I-2",
+    "A-I-3",
+    "A-I-4",
+    "A-I-5",
+    "A-I-6",
+    "A-I-8",
+    "A-I-9",
+    "A-I-10",
+    "A-I-12",
+    "A-I-13",
+    "A-I-14",
+    "A-I-15",
+    "A-I-16",
+    "A-I-17"
+  ];
+
+  var indiceFilas = 0;
+  var respuestas = [];
+  var completado = true;
+
+  grupos.forEach((nombreGrupo) => {
+    indiceFilas++;
+    const grupo = document.querySelector(
+      `input[name="${nombreGrupo}"]:checked`
+    );
+    if (!grupo) {
+      alert(`Por favor seleccionar una opción en la fila ${indiceFilas}`);
+      completado = false;
+    } else {
+      respuestas.push(grupo.value);
+    }
+  });
+
+  if (completado) {
+    console.log("Todas las selecciones completadas:", respuestas);
+    // Aquí puedes proceder con la siguiente parte de tu lógica de aplicación, como enviar el formulario, etc.
+  } else {
+    console.log("No todas las selecciones fueron completadas");
+    // Puedes decidir dejar que el usuario corrija o hacer alguna otra acción aquí.
+  }
 }

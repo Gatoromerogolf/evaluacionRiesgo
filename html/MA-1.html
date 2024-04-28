@@ -24,18 +24,18 @@
 <body>
   <header>
     <div class="logo">
-      <img src="img/bdtancho.png" width="100%" alt="">
+      <img src="../img/bdtancho.png" width="100%" alt="">
     </div>
 
     <nav>
       <ul>
         <li><a href="../index.html">Inicio</a></li>
-        <li><a href="Menu-A.html">Gobierno Corporativo</a></li>
-        <li><a href="../index.html">Opcion 2</a></li>
-        <li><a href="../index.html">Opcion 3</a></li>
-        <li><a href="../index.html">Opcion 4</a></li>
-        <li><a href="../index.html">Opcion 5</a></li>
-        <li><a href="../index.html">Opcion 6</a></li>
+        <li><a href="../html/Menu-A.html">Gobierno Corporativo</a></li>
+        <li><a href="index.html">Apetito de riesgo</a></li>
+        <li><a href="index.html">Riesgos de Mercado</a></li>
+        <li><a href="index.html">Riesgos de Procesos</a></li>
+        <li><a href="index.html">Situación Financiera</a></li>
+        <li><a href="index.html">Generación de Resultados</a></li>
       </ul>
     </nav>
 
@@ -66,7 +66,7 @@
         <ul class="listas">
           <li class="radiohori">01. Cantidad de directores que componen el Directorio:
             <label class="first-radio"><input type="radio" name="A-I-1" value="1"
-                onclick="mostrarOcultar( this.value)">hasta 3</label>
+                onclick="mostrarOcultar( this.value)">3</label>
             <label><input type="radio" name="A-I-1" value="2" onclick="mostrarOcultar(this.value)">4 o más</label>
           </li>
 
@@ -105,7 +105,7 @@
               <label class="first-radio"><input type="radio" name="A-I-5" value="1">0</label>
               <label><input type="radio" name="A-I-5" value="2">1</label>
               <label><input type="radio" name="A-I-5" value="3">2</label>
-              <label><input type="radio" name="A-I-5" value="4">3</label>
+              <label id="linea5-3" style="display: none"><input type="radio" name="A-I-5" value="4">3</label>
               <label id="linea5" style="display: none"><input type="radio" name="A-I-5" value="5">4 o más</label>
             </div>
           </li>
@@ -146,13 +146,13 @@
             <label><input type="radio" name="A-I-9" value="2">No</label>
           </li>
 
-          <li>10. La empresa cuenta con un Advisory Board:
+          <li>10. La empresa cuenta con un Consejo Asesor:
             <label class="first-radio"><input type="radio" name="A-I-10" value="1"
                 onclick="mostrarOcultarAB(this.value)">Si</label>
             <label><input type="radio" name="A-I-10" value="2" onclick="mostrarOcultarAB(this.value)">No</label>
           </li>
 
-          <li id="lineaAB" style="display: none">11. El Advisory Board participa con cierta frecuencia en las reuniones
+          <li id="lineaAB" style="display: none">11. El Consejo Asesor participa con cierta frecuencia en las reuniones
             del Directorio:
             <label id="lineaABS style=" display: none" class="first-radio"><input type="radio" name="A-I-11"
                 value="1">Si</label>
@@ -210,6 +210,7 @@
       document.getElementById('linea2').style.display = 'none';
       document.getElementById('linea3').style.display = 'none';
       document.getElementById('linea4').style.display = 'none';
+      document.getElementById('linea5-3').style.display = 'none';      
       document.getElementById('linea5').style.display = 'none';
       document.getElementById('linea6').style.display = 'none';
     } else {
@@ -217,6 +218,7 @@
       document.getElementById('linea2').style.display = 'inline-block';
       document.getElementById('linea3').style.display = 'inline-block';
       document.getElementById('linea4').style.display = 'inline-block';
+      document.getElementById('linea5-3').style.display = 'inline-block';
       document.getElementById('linea5').style.display = 'inline-block';
       document.getElementById('linea6').style.display = 'inline-block';
     }
@@ -240,9 +242,8 @@
 </script>
 
 
-
-<script src="datos/tabla01.js"></script>
-<script src="datos/tabla02.js"></script>
-<script src="apps/prueba.js"></script>
+<script src="../datos/tabla01.js"></script>
+<script src="../datos/tabla02.js"></script>
+<script src="../apps/prueba.js"></script>
 
 </html>
