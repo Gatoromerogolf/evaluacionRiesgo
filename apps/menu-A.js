@@ -100,6 +100,18 @@ tablaMenuA [0][3] = JSON.parse(localStorage.getItem('maximo'));
 tablaMenuA [0][4] = JSON.parse(localStorage.getItem('valores'));
 tablaMenuA [0][5] = JSON.parse(localStorage.getItem('porciento'));
 
+tablaMenuA [1][3] = JSON.parse(localStorage.getItem('maximo-2'));
+tablaMenuA [1][4] = JSON.parse(localStorage.getItem('valores-2'));
+tablaMenuA [1][5] = JSON.parse(localStorage.getItem('porciento-2'));
+
+tablaMenuA [2][3] = JSON.parse(localStorage.getItem('maximo-3'));
+tablaMenuA [2][4] = JSON.parse(localStorage.getItem('valores-3'));
+tablaMenuA [2][5] = JSON.parse(localStorage.getItem('porciento-3'));
+
+tablaMenuA [14][3] = JSON.parse(localStorage.getItem('maximo-15'));
+tablaMenuA [14][4] = JSON.parse(localStorage.getItem('valores-15'));
+tablaMenuA [14][5] = JSON.parse(localStorage.getItem('porciento-15'));
+
 
 // console.log(`puntos: ${valorRecuperado} y el maximo: ${valorMaximo} y el de funcion 2 ${valorFuncion2}`);
 

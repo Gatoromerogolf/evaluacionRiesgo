@@ -199,8 +199,11 @@ document
 
       porcientoFormateado = ((valores / maximo) * 100).toFixed(2);
       alert(
-        `Seleccion: ${respuestas} \n valores: ${valores} \n máximo: ${maximo} \n porcentaje: ${porcientoFormateado}%`
-      );
+          `Calificación obtenida: \n
+              Puntaje máximo de la sección: ${maximo} \n
+              Calificación: ${valores} \n
+              Porcentual: ${porcientoFormateado}%`
+        );
       console.log(`Suma puntos ${valores},
                  valor máximo: ${maximo},
                  porcentaje ${porcientoFormateado}`);
@@ -214,9 +217,10 @@ document
       localStorage.setItem('maximo', JSON.stringify(maximo));
       localStorage.setItem('valores', JSON.stringify(valores));
       localStorage.setItem('porciento', JSON.stringify(nuevoValor));
+
+      window.location.href = 'MA-2.html'
     }
   });
-
 
 // ---------------------------
 

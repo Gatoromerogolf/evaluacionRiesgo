@@ -52,29 +52,18 @@
         <br>
         <h1>XV - Secretaría del Directorio.</h1>
         <br>
-          <ul class="listas">    
-            <li>1. La Secretaría se asegura del cumplimiento del Estatuto, el Código de Gobierno y el Reglamento del Directorio, en su caso
-              <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
-              <label><input type="radio" name="opcion" value="4">No</label>
-            </li>
-            <li>2. Los directores evalúan a la Secretaría
-              <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
-              <label><input type="radio" name="opcion" value="4">No</label>
-            </li>
-            <li></li>
-            <!-- <li>3. Focaliza al Directorio en los asuntos relevantes y se involucra cuando surgen conflictos de interés
-              <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
-              <label><input type="radio" name="opcion" value="4">No</label>
-            </li> -->
-            <!-- <li>4. Fomenta y facilita debates de alta calidad
-              <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
-              <label><input type="radio" name="opcion" value="4">No</label>
-            </li> -->
-            <!-- <li>5. Establece sistemas para evaluar el funcionamiento del Directorio y el desempeño de sus miembros
-              <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
-              <label><input type="radio" name="opcion" value="4">No</label>
-            </li> -->
-          </ul>
+        <ul class="listas">
+          <li>1. La Secretaría se asegura del cumplimiento del Estatuto, el Código de Gobierno y el Reglamento del
+            Directorio, en su caso
+            <label class="first-radio"><input type="radio" name="A-15" value="1">Si</label>
+            <label><input type="radio" name="A-15" value="0">No</label>
+          <li>2. Los directores evalúan a la Secretaría
+            <div class="filaIA">
+              <label class="first-radio"><input type="radio" name="A-16" value="1">Si</label>
+              <label><input type="radio" name="A-16" value="0">No</label>
+          </li>
+          <li></li>
+        </ul>
 
 
         <div class="centrado-flex">
@@ -86,6 +75,7 @@
         </div>
 
       </form>
+
     </section>
   </section>
 
@@ -108,10 +98,32 @@
     </footer>
   </section>
 
+          <!-- </form> -->
+
+          <button onclick="mostrarAlerta()">Mostrar Alerta</button>
+
+          <div id="miAlerta" class="alerta-oculto">
+            <div class="alerta-contenido">
+              <div class="alerta-cabecera">
+                <span><center>Resumen de la sección</center></span>
+                <!-- <button type="button" onclick="cerrarAlerta()">Cerrar</button> -->
+              </div>
+              <div class="alerta-cuerpo">
+                <p>Puntaje máximo posible: <span id="maximo"></span></p>
+                <br>
+                <p>Calificación obtenida: <span id="calificacion"></span></p>
+                <br>
+                <p>Porcentual: <span id="porcentual"></span></p>
+                <br>
+                <button onclick="continuar()">Continuar</button>
+              </div>
+            </div>
+          </div>
+
 </body>
 
 <script src="../datos/tabla01.js"></script>
 <script src="../datos/tabla02.js"></script>
-<script src="../apps/prueba.js"></script>
+<script src="../apps/MA-15.js"></script>
 
 </html>
