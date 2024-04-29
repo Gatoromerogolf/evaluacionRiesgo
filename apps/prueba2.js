@@ -88,6 +88,7 @@ function obtenerValoresSeleccionados() {
 function obtenerCheckboxSeleccionados() {
   let errorCheckbox = 0;
   checkboxesSeleccionados = [];
+
   // Obtener todos los elementos checkbox
   var checkboxes = document.querySelectorAll('input[type="checkbox"]');
   var ultimoCheckbox = checkboxes[checkboxes.length - 1]; // El último checkbox es especial
@@ -105,11 +106,11 @@ function obtenerCheckboxSeleccionados() {
   if (ultimoSeleccionado && otrosSeleccionados) {
     alert(
       "No es posible seleccionar 'Ningún Director' junto con otras opciones en fila 7.");
-      errorCheckbox = 1;
-      return errorCheckbox;
+    errorCheckbox = 1;
+    return errorCheckbox;
   }
 
-  // Si solo el último está seleccionado o algunos de los otros, pero no ambos
+  // Si solo el último está seleccionado o algunos de los otros, pero no ambos>:  || = OR
   if (ultimoSeleccionado || otrosSeleccionados) {
     // Agregar los seleccionados al array
     checkboxes.forEach(function (checkbox) {
@@ -124,17 +125,18 @@ function obtenerCheckboxSeleccionados() {
     errorCheckbox = 1;
     return errorCheckbox;
   }
+  return errorCheckbox;
+}
 
+// --------------------------
+
+function sumaPuntosCheckbox() {
   // acumula los puntos por los checkbox seleccionados
   if (!puntajesIndividuales[6]) puntajesIndividuales[6] = []; // Asegurar que existe el arreglo antes de asignar valores
 
   puntajesIndividuales[6][2] = 0;
   for (i = 0; i < checkboxesSeleccionados.length; i++) {
-    let indicejota = checkboxesSeleccionados[i] - 1;
-    console.log(`indicejota ${indicejota} check ${checkboxesSeleccionados[i]}`);
-    console.log("valores "  + valores);
-    console.log("check -1 " + (checkboxesSeleccionados[i] - 1));
-    console.log ("tabla 6 " + tabla[6]);
+    // let indicejota = checkboxesSeleccionados[i] - 1;
     valores += tabla[6][checkboxesSeleccionados[i] - 1];
 
     puntajesIndividuales[6][0] = 7;
@@ -144,45 +146,10 @@ function obtenerCheckboxSeleccionados() {
       `valor despues calculo: ${valores} , ${checkboxesSeleccionados[i]}`)
       ;
   }
-  errorCheckbox = 0;
+  // errorCheckbox = 0;
 }
 // --------------------------------
 
-function limpiarSelecciones() {
-  // Obtener todos los inputs tipo radio y checkbox
-  var radios = document.querySelectorAll('input[type="radio"]');
-  var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-
-  // Desmarcar todos los radios
-  radios.forEach(function (radio) {
-    radio.checked = false;
-  });
-
-  // Desmarcar todos los checkboxes
-  checkboxes.forEach(function (checkbox) {
-    checkbox.checked = false;
-  });
-}
-
-// document
-//   .getElementById("formulario")
-//   .addEventListener("submit", function (event) {
-//     valores = 0;
-//     event.preventDefault(); // Prevenir el envío del formulario
-//     obtenerValoresSeleccionados(); // Llamar a la función al enviar el formulario
-//     // obtenerCheckboxSeleccionados();
-//     porcientoFormateado = calculaResultados();
-//     obtenerCheckboxSeleccionados();
-//     alert(
-//       `Seleccion: ${respuestas} \n valores: ${valores} \n máximo: ${maximo} \n porcentaje: ${porcientoFormateado}%`
-//     );
-//     console.log (`Suma puntos ${valores},
-//                  valor máximo: ${maximo},
-//                  porcentaje ${porcientoFormateado}`);
-//     console.table(puntajesIndividuales);
-//   });
-
-// --------------------------------
 
 function calculaResultados() {
   tabla = respuestas[0] == 1 ? tabla01 : tabla02;
@@ -190,7 +157,7 @@ function calculaResultados() {
   console.log(respuestas[0], maximo, tabla01[0][2], tabla02[0][2]);
 
   for (let i = 0; i < respuestas.length; i++) {
-    // if(i===6) {i++};
+
     if (i === 6) continue;
     if (!puntajesIndividuales[i]) puntajesIndividuales[i] = []; // Asegurar que existe el arreglo antes de asignar valores
     console.log(`i= ${i} ,
@@ -223,13 +190,13 @@ document
 
     // obtener CheckboxSeleccionados();
     let resultadoError = obtenerCheckboxSeleccionados();
-    console.log (`return del checkbox  ${resultadoError}`)
+    console.log(`return del checkbox  ${resultadoError}`)
 
     // Si no hay faltantes sigue adelante...
     if ((!(filasFaltantes.length > 0)) && (resultadoError == 0)) {
       porcientoFormateado = calculaResultados();
+      sumaPuntosCheckbox();
 
-      // obtenerCheckboxSeleccionados();
       porcientoFormateado = ((valores / maximo) * 100).toFixed(2);
       alert(
         `Seleccion: ${respuestas} \n valores: ${valores} \n máximo: ${maximo} \n porcentaje: ${porcientoFormateado}%`
@@ -253,6 +220,24 @@ document
 
 // ---------------------------
 
+
+function limpiarSelecciones() {
+  // Obtener todos los inputs tipo radio y checkbox
+  var radios = document.querySelectorAll('input[type="radio"]');
+  var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+  // Desmarcar todos los radios
+  radios.forEach(function (radio) {
+    radio.checked = false;
+  });
+
+  // Desmarcar todos los checkboxes
+  checkboxes.forEach(function (checkbox) {
+    checkbox.checked = false;
+  });
+}
+
+// ---------------------------
 
 function validarSeleccionGrupos() {
   var grupos = [

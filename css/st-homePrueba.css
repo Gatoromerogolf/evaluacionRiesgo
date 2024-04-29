@@ -93,10 +93,20 @@ header nav ul li a:hover{
   width: 40px; /* Ajusta el tamaño de las imágenes según necesites */
   height: auto;
 }
+
+
 /*--------------    TABLA DE INDICE ------------*/
 .contenedorTabla{
   margin: 0 auto; /* Centra horizontalmente el contenedor */
   width: 75%; /* Ajusta el ancho del contenedor según sea necesario */    
+}
+
+#tablaIndice  th{
+  background-color: #f0f0f0; /* Color de fondo */
+  border: 1px solid #ccc; /* Borde */
+  padding: 8px; /* Espaciado interno */
+  text-align: center; /* Alineación del texto */
+  font-family:'Roboto', sans-serif;
 }
 
 #tablaIndice {
@@ -111,7 +121,7 @@ header nav ul li a:hover{
 
 
 #tablaIndice tr{
-    height: 35px;
+    height: 30px;
 }
 
 
@@ -141,6 +151,12 @@ td a:hover {
     text-align: center;
 }
 
+/*Con el selector nth-child para seleccionar las celdas de las columnas 3, 4 y 5 de la tabla aplicamos el estilo text-align: center; para centrar el contenido de estas celdas horizontalmente.*/ 
+#tablaIndice td:nth-child(3),
+#tablaIndice td:nth-child(4),
+#tablaIndice td:nth-child(5) {
+    text-align: center; /* Centra el contenido de las celdas */
+}
 
 /*-----------------   ARTICULOS  --------*/
 
