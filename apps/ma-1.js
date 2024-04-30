@@ -8,9 +8,7 @@ let filasFaltantes = [];
 
 let checkboxesSeleccionados = [];
 
-
 // --------------------------
-
 
 function obtenerValoresSeleccionados() {
   respuestas = [];
@@ -29,7 +27,7 @@ function obtenerValoresSeleccionados() {
     "A-I-14",
     "A-I-15",
     "A-I-16",
-    "A-I-17"
+    "A-I-17",
   ];
 
   var indiceFilas = 0;
@@ -44,31 +42,31 @@ function obtenerValoresSeleccionados() {
     } else {
       respuestas.push(null); // Agrega null si no hay selección
       if (indiceFilas < 7) {
-        filasFaltantes.push(indiceFilas)
-      }
-      else {
+        filasFaltantes.push(indiceFilas);
+      } else {
         if (indiceFilas < 11) {
-          filasFaltantes.push(indiceFilas + 1)
-        }
-        else {
-          filasFaltantes.push(indiceFilas + 2)
+          filasFaltantes.push(indiceFilas + 1);
+        } else {
+          filasFaltantes.push(indiceFilas + 2);
         }
       }
     }
-  }
-  );
+  });
 
   if (filasFaltantes.length > 0) {
-    alert(`Falta infomar en estas filas: ${filasFaltantes}`)
-  }
-  else {
+    alert(`Falta infomar en estas filas: ${filasFaltantes}`);
+  } else {
     //  inserta con 6 el valor de los checkbox para que se posicione en la ultima = 0
     respuestas.splice(6, 0, 6);
 
-    const advisoryBoard = document.querySelector(`input[name="A-I-10"]:checked`);
+    const advisoryBoard = document.querySelector(
+      `input[name="A-I-10"]:checked`
+    );
     if (advisoryBoard.value == 1) {
       // indica que se informó que tiene AB
-      const respuestaAB = document.querySelector(`input[name="A-I-11"]:checked`);
+      const respuestaAB = document.querySelector(
+        `input[name="A-I-11"]:checked`
+      );
       // si puso que tiene AB tiene que informar el campo 11
       if (respuestaAB) {
         console.log("entro por aca: " + respuestaAB.value);
@@ -78,7 +76,7 @@ function obtenerValoresSeleccionados() {
         alert(`No selecciono lo del AB en la fila 11`);
       }
     }
-    console.log(`respuestas con 7 y 11 ${respuestas}`)
+    console.log(`respuestas con 7 y 11 ${respuestas}`);
     return respuestas; // Devuelve el arreglo si necesitas hacer algo más con él
   }
 }
@@ -105,7 +103,8 @@ function obtenerCheckboxSeleccionados() {
   // Si el último está seleccionado y también otro, mostrar alerta y retornar
   if (ultimoSeleccionado && otrosSeleccionados) {
     alert(
-      "No es posible seleccionar 'Ningún Director' junto con otras opciones en fila 7.");
+      "No es posible seleccionar 'Ningún Director' junto con otras opciones en fila 7."
+    );
     errorCheckbox = 1;
     return errorCheckbox;
   }
@@ -140,16 +139,15 @@ function sumaPuntosCheckbox() {
     valores += tabla[6][checkboxesSeleccionados[i] - 1];
 
     puntajesIndividuales[6][0] = 7;
-    puntajesIndividuales[6][1] = checkboxesSeleccionados.join(', '); //Se convierte el array checkboxesSeleccionados en una cadena y luego se asigna esa cadena
-    puntajesIndividuales[6][2] += tabla[6][checkboxesSeleccionados[i] - 1]
+    puntajesIndividuales[6][1] = checkboxesSeleccionados.join(", "); //Se convierte el array checkboxesSeleccionados en una cadena y luego se asigna esa cadena
+    puntajesIndividuales[6][2] += tabla[6][checkboxesSeleccionados[i] - 1];
     console.log(
-      `valor despues calculo: ${valores} , ${checkboxesSeleccionados[i]}`)
-      ;
+      `valor despues calculo: ${valores} , ${checkboxesSeleccionados[i]}`
+    );
   }
   // errorCheckbox = 0;
 }
 // --------------------------------
-
 
 function calculaResultados() {
   tabla = respuestas[0] == 1 ? tabla01 : tabla02;
@@ -157,7 +155,6 @@ function calculaResultados() {
   console.log(respuestas[0], maximo, tabla01[0][2], tabla02[0][2]);
 
   for (let i = 0; i < respuestas.length; i++) {
-
     if (i === 6) continue;
     if (!puntajesIndividuales[i]) puntajesIndividuales[i] = []; // Asegurar que existe el arreglo antes de asignar valores
     console.log(`i= ${i} ,
@@ -184,46 +181,47 @@ document
     valores = 0;
     event.preventDefault(); // Prevenir el envío del formulario
 
-    // obtener los valores de radio 
+    // obtener los valores de radio
     obtenerValoresSeleccionados();
-    console.log(`indice de respuestas faltantes ${filasFaltantes}`)
+    console.log(`indice de respuestas faltantes ${filasFaltantes}`);
 
     // obtener CheckboxSeleccionados();
     let resultadoError = obtenerCheckboxSeleccionados();
-    console.log(`return del checkbox  ${resultadoError}`)
+    console.log(`return del checkbox  ${resultadoError}`);
 
     // Si no hay faltantes sigue adelante...
-    if ((!(filasFaltantes.length > 0)) && (resultadoError == 0)) {
+    if (!(filasFaltantes.length > 0) && resultadoError == 0) {
       porcientoFormateado = calculaResultados();
       sumaPuntosCheckbox();
 
       porcientoFormateado = ((valores / maximo) * 100).toFixed(2);
-      alert(
-          `Calificación obtenida: \n
-              Puntaje máximo de la sección: ${maximo} \n
-              Calificación: ${valores} \n
-              Porcentual: ${porcientoFormateado}%`
-        );
-      console.log(`Suma puntos ${valores},
-                 valor máximo: ${maximo},
-                 porcentaje ${porcientoFormateado}`);
-      console.table(puntajesIndividuales);
+      // alert(
+      //     `Calificación obtenida: \n
+      //         Puntaje máximo de la sección: ${maximo} \n
+      //         Calificación: ${valores} \n
+      //         Porcentual: ${porcientoFormateado}%`
+      //   );
 
+      mostrarMiAlerta(maximo, valores, porcientoFormateado);
 
-      // Supongamos que calculas o recibes algún valor 'nuevoValor'
-      let nuevoValor = porcientoFormateado; // Función hipotética que genera un valor
+      //   console.log(`Suma puntos ${valores},
+      //            valor máximo: ${maximo},
+      //            porcentaje ${porcientoFormateado}`);
+      // console.table(puntajesIndividuales);
+
+      // // Supongamos que calculas o recibes algún valor 'nuevoValor'
+      // let nuevoValor = porcientoFormateado; // Función hipotética que genera un valor
 
       // Guardar el valor en LocalStorage
-      localStorage.setItem('maximo', JSON.stringify(maximo));
-      localStorage.setItem('valores', JSON.stringify(valores));
-      localStorage.setItem('porciento', JSON.stringify(nuevoValor));
+      localStorage.setItem("maximo", JSON.stringify(maximo));
+      localStorage.setItem("valores", JSON.stringify(valores));
+      localStorage.setItem("porciento", JSON.stringify(porcientoFormateado));
 
-      window.location.href = 'MA-2.html'
+      // window.location.href = 'MA-2.html'
     }
   });
 
 // ---------------------------
-
 
 function limpiarSelecciones() {
   // Obtener todos los inputs tipo radio y checkbox
@@ -241,7 +239,28 @@ function limpiarSelecciones() {
   });
 }
 
-// ---------------------------
+// ------------ ventana del final con resultados---------------
+
+function mostrarMiAlerta(maximo, valores, porcientoFormateado) {
+  // Actualizar los contenidos
+  document.getElementById("maximo").textContent = maximo;
+  document.getElementById("calificacion").textContent = valores;
+  document.getElementById("porcentual").innerHTML =
+    "<strong>" + porcientoFormateado + "%<strong>";
+  // Mostrar la alerta personalizada
+  document.getElementById("miAlerta").style.display = "block";
+}
+
+function cerrarAlerta() {
+  document.getElementById("miAlerta").style.display = "none";
+}
+
+function continuar() {
+  cerrarAlerta(); // Opcional, depende de si quieres cerrar la alerta antes de cambiar la página
+  window.location.href = "MA-2.html";
+}
+
+// ------------------ no se utiliza
 
 function validarSeleccionGrupos() {
   var grupos = [
@@ -259,7 +278,7 @@ function validarSeleccionGrupos() {
     "A-I-14",
     "A-I-15",
     "A-I-16",
-    "A-I-17"
+    "A-I-17",
   ];
 
   var indiceFilas = 0;

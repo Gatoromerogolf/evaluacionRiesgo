@@ -114,28 +114,30 @@ document
       sumaPuntosCheckbox();
 
       porcientoFormateado = ((valores / maximo) * 100).toFixed(2);
-      alert(
-        `Calificación obtenida: \n
-            Puntaje máximo de la sección: ${maximo} \n
-            Calificación: ${valores} \n
-            Porcentual: ${porcientoFormateado}%`
-      );
-      console.log(`Suma puntos ${valores},
-                 valor máximo: ${maximo},
-                 porcentaje ${porcientoFormateado}`);
-      console.table(puntajesIndividuales);
+      // alert(
+      //   `Calificación obtenida: \n
+      //       Puntaje máximo de la sección: ${maximo} \n
+      //       Calificación: ${valores} \n
+      //       Porcentual: ${porcientoFormateado}%`
+      // );
+      mostrarMiAlerta(maximo, valores, porcientoFormateado);
+
+      // console.log(`Suma puntos ${valores},
+      //            valor máximo: ${maximo},
+      //            porcentaje ${porcientoFormateado}`);
+      // console.table(puntajesIndividuales);
 
 
-      // Supongamos que calculas o recibes algún valor 'nuevoValor'
-      let nuevoValor = porcientoFormateado; // Función hipotética que genera un valor
+      // // Supongamos que calculas o recibes algún valor 'nuevoValor'
+      // let nuevoValor = porcientoFormateado; // Función hipotética que genera un valor
 
       // Guardar el valor en LocalStorage
 
       localStorage.setItem('maximo-2', JSON.stringify(maximo));
       localStorage.setItem('valores-2', JSON.stringify(valores));
-      localStorage.setItem('porciento-2', JSON.stringify(nuevoValor));
+      localStorage.setItem('porciento-2', JSON.stringify(porcientoFormateado));
 
-      window.location.href = 'MA-3.html'
+      // window.location.href = 'MA-3.html'
     }
   });
 
@@ -179,5 +181,23 @@ function limpiarSelecciones() {
   });
 }
 
-// ---------------------------
+// ------------ ventana del final con resultados---------------
 
+
+function mostrarMiAlerta(maximo, valores, porcientoFormateado) {
+  // Actualizar los contenidos
+  document.getElementById('maximo').textContent = maximo;
+  document.getElementById('calificacion').textContent = valores;
+  document.getElementById('porcentual').innerHTML = '<strong>' + porcientoFormateado + '%<strong>';
+  // Mostrar la alerta personalizada
+  document.getElementById('miAlerta').style.display = 'block';
+}
+
+function cerrarAlerta() {
+  document.getElementById("miAlerta").style.display = "none";
+}
+
+function continuar() {
+  cerrarAlerta();  // Opcional, depende de si quieres cerrar la alerta antes de cambiar la página
+  window.location.href = "MA-3.html";
+}

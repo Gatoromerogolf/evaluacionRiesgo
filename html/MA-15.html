@@ -98,27 +98,25 @@
     </footer>
   </section>
 
-          <!-- </form> -->
+<!-- ventana al final con resultados -->
 
-          <button onclick="mostrarAlerta()">Mostrar Alerta</button>
-
-          <div id="miAlerta" class="alerta-oculto">
-            <div class="alerta-contenido">
-              <div class="alerta-cabecera">
-                <span><center>Resumen de la sección</center></span>
-                <!-- <button type="button" onclick="cerrarAlerta()">Cerrar</button> -->
-              </div>
-              <div class="alerta-cuerpo">
-                <p>Puntaje máximo posible: <span id="maximo"></span></p>
-                <br>
-                <p>Calificación obtenida: <span id="calificacion"></span></p>
-                <br>
-                <p>Porcentual: <span id="porcentual"></span></p>
-                <br>
-                <button onclick="continuar()">Continuar</button>
-              </div>
-            </div>
-          </div>
+  <div id="miAlerta" class="alerta-oculto">
+    <div class="alerta-contenido">
+      <div class="alerta-cabecera">
+        <span>Resumen de la sección</span>
+        <!-- <button type="button" onclick="cerrarAlerta()">Cerrar</button> -->
+      </div>
+      <div class="alerta-cuerpo">
+        <p>Puntaje máximo posible: <span id="maximo"></span></p>
+        <br>
+        <p>Calificación obtenida: <span id="calificacion"></span></p>
+        <br>
+        <p>Porcentual: <span id="porcentual"></span></p>
+        <br>
+        <button id="continuar" onclick="continuar()">Continuar</button>
+      </div>
+    </div>
+  </div>
 
 </body>
 

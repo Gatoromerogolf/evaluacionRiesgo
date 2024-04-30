@@ -142,3 +142,7 @@ function continuar() {
   cerrarAlerta();  // Opcional, depende de si quieres cerrar la alerta antes de cambiar la página
   window.location.href = "Menu-A.html";
 }
+
+function actualizarValorRange(valor) {
+  document.getElementById("valorRange").textContent = valor + "%";
+}

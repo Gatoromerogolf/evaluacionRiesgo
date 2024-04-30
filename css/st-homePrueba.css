@@ -335,20 +335,37 @@ ul ul{
   padding: 20px;
   background: white;
   border-radius: 5px;
+  font-family:'Roboto', sans-serif;
 }
 
 .alerta-cabecera {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
+  text-align: center;
   font-size: 20px; /* Tamaño de la fuente */
   font-weight: bold; /* Negrita */
-  font-family:'Roboto', sans-serif;
 }
 
-.alerta-cuerpo p {
+.alerta-cuerpo {
   margin: 0;
-  font-family:'Roboto', sans-serif;
   font-size: 16px; /* Tamaño de la fuente */
+  text-align: center;
+}
+
+#continuar{
+  background-color: #4CAF50; /* Color de fondo */
+  color: white; /* Color de texto */
+  padding: 12px 24px; /* Espaciado alrededor del texto */
+  border: none; /* Sin bordes */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor en forma de mano al pasar el mouse */
+  transition: all 0.3s; /* Transición suave para los cambios */
+  font-size: 16px; /* Tamaño de la fuente */
+  font-weight: bold; /* Negrita */
+  margin-top: 20px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
 }
