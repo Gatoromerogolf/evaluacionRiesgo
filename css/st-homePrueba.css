@@ -22,7 +22,7 @@ h2{
       MENU SUPERIOR */
 
 header, .main, footer {
-  width:95%;
+  width:100%;
   max-width:1000px;
   margin:20px auto;
 }
@@ -162,7 +162,7 @@ td a:hover {
 /*-----------------   ARTICULOS  --------*/
 
 .main .articles{
-  width:95%;
+  width:100%;
   float:left;
   /*margin-right: 1.5%;*/
 }
