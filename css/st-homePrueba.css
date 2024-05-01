@@ -22,7 +22,7 @@ h2{
       MENU SUPERIOR */
 
 header, .main, footer {
-  width:90%;
+  width:95%;
   max-width:900px;
   margin:20px auto;
 }

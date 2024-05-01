@@ -102,6 +102,8 @@ let tablaMenuA = [
 // let valores = JSON.parse(localStorage.getItem('valores'));
 // let valorPuntos = JSON.parse(localStorage.getItem('nuevoValor'));
 
+alert (`valor de local storage ${localStorage}`)
+
 for (i = 0; i < tablaMenuA.length; i++) {
   tablaMenuA[i][3] = 0;
   tablaMenuA[i][4] = 0;

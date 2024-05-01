@@ -217,6 +217,13 @@ document
       localStorage.setItem("valores", JSON.stringify(valores));
       localStorage.setItem("porciento", JSON.stringify(porcientoFormateado));
 
+      localStorage.setItem("1", JSON.stringify({
+        maximo: maximo,
+        valores: valores,
+        porciento: porcientoFormateado        
+      }));
+
+      console.log (localStorage);
       // window.location.href = 'MA-2.html'
     }
   });
