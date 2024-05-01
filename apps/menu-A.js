@@ -125,8 +125,6 @@ tablaMenuA[14][4] = JSON.parse(localStorage.getItem('valores-15'));
 tablaMenuA[14][5] = JSON.parse(localStorage.getItem('porciento-15'));
 
 for (i = 0; i < tablaMenuA.length - 1; i++) {
-  console.log(tablaMenuA[i][3])
-  console.log(tablaMenuA[i][4])
   tablaMenuA[15][3] += tablaMenuA[i][3];
   tablaMenuA[15][4] += tablaMenuA[i][4];
 }
