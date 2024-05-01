@@ -89,12 +89,24 @@ let tablaMenuA = [
     ,
     ,
     ],  
+    ["",
+    "MA-15.html",
+    " - - - - - - -  - CALIFICACION GENERAL",
+    ,
+    ,
+    ],  
 ]
 
 // Recuperar el valor de LocalStorage
 // let valorMaximo = JSON.parse(localStorage.getItem('maximo'));
 // let valores = JSON.parse(localStorage.getItem('valores'));
 // let valorPuntos = JSON.parse(localStorage.getItem('nuevoValor'));
+
+for (i=0; i<tablaMenuA.length; i++){
+  tablaMenuA [i][3] = 0;
+  tablaMenuA [i][4] = 0;
+  tablaMenuA [i][5] = 0;
+}
 
 tablaMenuA [0][3] = JSON.parse(localStorage.getItem('maximo'));
 tablaMenuA [0][4] = JSON.parse(localStorage.getItem('valores'));
@@ -112,6 +124,13 @@ tablaMenuA [14][3] = JSON.parse(localStorage.getItem('maximo-15'));
 tablaMenuA [14][4] = JSON.parse(localStorage.getItem('valores-15'));
 tablaMenuA [14][5] = JSON.parse(localStorage.getItem('porciento-15'));
 
+for (i=0; i<tablaMenuA.length - 1; i++){
+  console.log (tablaMenuA [i][3])
+  console.log (tablaMenuA [i][4])
+  tablaMenuA [15][3] += tablaMenuA [i][3];
+  tablaMenuA [15][4] += tablaMenuA [i][4];
+}
+tablaMenuA[15][5] = ((tablaMenuA [i][4] / tablaMenuA [15][3]) * 100).toFixed(2);
 
 // console.log(`puntos: ${valorRecuperado} y el maximo: ${valorMaximo} y el de funcion 2 ${valorFuncion2}`);
 
