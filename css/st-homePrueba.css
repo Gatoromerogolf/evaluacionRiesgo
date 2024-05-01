@@ -30,6 +30,7 @@ header, .main, footer {
 header nav{
   background-color:#528FD5;
   overflow: hidden;
+  max-width: 95%;
 }
 
 header nav ul{
@@ -43,7 +44,7 @@ header nav ul li{
 
 header nav ul li a{
   text-decoration: none;
-  padding:10px 10px;
+  padding:10px 8px;
   display:block;
   max-width: 100px;
   white-space: normal;
