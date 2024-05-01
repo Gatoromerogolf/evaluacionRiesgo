@@ -134,6 +134,7 @@ tablaMenuA[15][5] = ((tablaMenuA [i][4] / tablaMenuA [15][3]) * 100).toFixed(2);
 
 // console.log(`puntos: ${valorRecuperado} y el maximo: ${valorMaximo} y el de funcion 2 ${valorFuncion2}`);
 
+//  llena la matriz 
 let lineaDatosFd = document.getElementById("lineaMenu");
 
 for (i = 0; i < tablaMenuA.length; i++) {
