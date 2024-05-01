@@ -23,7 +23,7 @@ h2{
 
 header, .main, footer {
   width:90%;
-  max-width:1000px;
+  max-width:900px;
   margin:20px auto;
 }
 
@@ -43,7 +43,7 @@ header nav ul li{
 
 header nav ul li a{
   text-decoration: none;
-  padding:10px 15px;
+  padding:10px 10px;
   display:block;
   max-width: 100px;
   white-space: normal;
