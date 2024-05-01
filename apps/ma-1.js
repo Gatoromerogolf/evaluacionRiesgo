@@ -195,35 +195,21 @@ document
       sumaPuntosCheckbox();
 
       porcientoFormateado = ((valores / maximo) * 100).toFixed(2);
-      // alert(
-      //     `Calificación obtenida: \n
-      //         Puntaje máximo de la sección: ${maximo} \n
-      //         Calificación: ${valores} \n
-      //         Porcentual: ${porcientoFormateado}%`
-      //   );
 
       mostrarMiAlerta(maximo, valores, porcientoFormateado);
-
-      //   console.log(`Suma puntos ${valores},
-      //            valor máximo: ${maximo},
-      //            porcentaje ${porcientoFormateado}`);
-      // console.table(puntajesIndividuales);
-
-      // // Supongamos que calculas o recibes algún valor 'nuevoValor'
-      // let nuevoValor = porcientoFormateado; // Función hipotética que genera un valor
 
       // Guardar el valor en LocalStorage
       localStorage.setItem("maximo", JSON.stringify(maximo));
       localStorage.setItem("valores", JSON.stringify(valores));
       localStorage.setItem("porciento", JSON.stringify(porcientoFormateado));
 
-      localStorage.setItem("1", JSON.stringify({
-        maximo: maximo,
-        valores: valores,
-        porciento: porcientoFormateado        
-      }));
+      // localStorage.setItem("1", JSON.stringify({
+      //   maximo: maximo,
+      //   valores: valores,
+      //   porciento: porcientoFormateado        
+      // }));
 
-      console.log (localStorage);
+
       // window.location.href = 'MA-2.html'
     }
   });

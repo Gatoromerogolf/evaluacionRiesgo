@@ -23,14 +23,14 @@ h2{
 
 header, .main, footer {
   width:95%;
-  max-width:900px;
+  max-width:1000px;
   margin:20px auto;
 }
 
 header nav{
   background-color:#528FD5;
   overflow: hidden;
-  max-width: 95%;
+  max-width: 100%;
 }
 
 header nav ul{

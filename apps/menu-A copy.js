@@ -104,6 +104,10 @@ let tablaMenuA = [
 
 alert (`valor de local storage ${localStorage}`)
 
+tablaMenuA[0][3] = JSON.parse(localStorage.getItem(1, maximo));
+tablaMenuA[0][4] = JSON.parse(localStorage.getItem(1, valores));
+tablaMenuA[0][5] = JSON.parse(localStorage.getItem(1, porciento));
+
 for (i = 0; i < tablaMenuA.length; i++) {
   tablaMenuA[i][3] = 0;
   tablaMenuA[i][4] = 0;
