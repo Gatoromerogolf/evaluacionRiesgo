@@ -24,7 +24,7 @@ h2{
 header, .main, footer {
   width:100%;
   max-width:1000px;
-  margin:20px auto;
+  margin:10px auto;
 }
 
 header nav{
@@ -44,15 +44,14 @@ header nav ul li{
 
 header nav ul li a{
   text-decoration: none;
-  padding:10px 8px;
+  padding:5px 5px;
   display:block;
   max-width: 100px;
   white-space: normal;
   color:white;
   font-family:'Roboto', sans-serif;
   font-size:14px;
-  /*font-weight: bolder;*/
-  font-weight: bold;
+  font-weight:500;
 }
 
 header nav ul li a:hover{
