@@ -153,12 +153,21 @@ for (i = 0; i < tablaMenuA.length; i++) {
   celdaEnlace.appendChild(enlace); // Agregar el enlace como hijo de la celda
 
   celdaMaximo = lineaDatosFd.insertCell(-1);
+  if (tablaMenuA[i][3] === 0){
+    tablaMenuA[i][3] = ""
+  }
   celdaMaximo.textContent = tablaMenuA[i][3];
 
   celdaPuntos = lineaDatosFd.insertCell(-1);
+  if (tablaMenuA[i][4] === 0){
+    tablaMenuA[i][4] = ""
+  }
   celdaPuntos.textContent = tablaMenuA[i][4];
 
   celdaPorciento = lineaDatosFd.insertCell(-1);
+  if (tablaMenuA[i][5] === 0){
+    tablaMenuA[i][5] = ""
+  }
   celdaPorciento.textContent = tablaMenuA[i][5];
 
 
