@@ -91,7 +91,7 @@ let tablaMenuA = [
     ],  
     ["",
     "MA-15.html",
-    " - - - - - - -  - CALIFICACION GENERAL",
+    " - - - - - - - - - - CALIFICACION GENERAL - - -",
     ,
     ,
     ],  
