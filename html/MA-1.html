@@ -123,8 +123,7 @@
           <li>07. El Directorio posee por lo menos un miembro con experiencia en (marcar todas las que correspondan):
           </li>
           <ul>
-            <li><input id="uno" type="checkbox" value="1"><label class="check" for="uno">Transformación digital/Change
-                Management</label></li>
+            <li><input id="uno" type="checkbox" value="1"><label class="check" for="uno">Transformación digital/Change Management</label></li>
             <li><input id="dos" type="checkbox" value="2"><label class="check" for="dos">Control Interno</label></li>
             <li><input id="tres" type="checkbox" value="3"><label class="check" for="tres">Manejo de Riesgos</label>
             </li>
@@ -152,11 +151,9 @@
             <label><input type="radio" name="A-I-10" value="2" onclick="mostrarOcultarAB(this.value)">No</label>
           </li>
 
-          <li id="lineaAB" style="display: none">11. El Consejo Asesor participa con cierta frecuencia en las reuniones
-            del Directorio:
-            <label id="lineaABS style=" display: none" class="first-radio"><input type="radio" name="A-I-11"
-                value="1">Si</label>
-            <label id="lineaABN style=" display: none"><input type="radio" name="A-I-11" value="2">No</label>
+          <li id="lineaAB" style="display: none">11. El Consejo Asesor participa con cierta frecuencia en las reuniones del Directorio:
+            <label id="lineaABS" style="display: none" class="first-radio"><input type="radio" name="A-I-11" value="1">Si</label>
+            <label id="lineaABN" style="display: none"><input type="radio" name="A-I-11" value="2">No</label>
           </li>
 
           <li>12. Las funciones y responsabilidades del Directorio están documentadas:
@@ -252,13 +249,13 @@
     // Muestra las líneas si el valor seleccionado es '1'
     if (valorSeleccionadoAB === '1') {
       document.getElementById('lineaAB').style.display = 'block';
-      // document.getElementById('lineaABS').style.display = 'inline-block';
-      // document.getElementById('lineaABN').style.display = 'inline-block';
+      document.getElementById('lineaABS').style.display = 'inline-block';
+      document.getElementById('lineaABN').style.display = 'inline-block';
     } else {
       // Mostrar las líneas si se selecciona cualquier otro valor
       document.getElementById('lineaAB').style.display = 'none';
-      // document.getElementById('lineaABS').style.display = 'none';
-      // document.getElementById('lineaABN').style.display = 'none';
+      document.getElementById('lineaABS').style.display = 'none';
+      document.getElementById('lineaABN').style.display = 'none';
     }
   }
 </script>

@@ -255,6 +255,10 @@ ul ul{
   margin-left: 20px; /* Espaciado desde el texto al primer boton radio */
 }
 
+.frecuencia-V{
+  margin-left: 100px; /* Espaciado desde el texto al primer boton radio */
+}
+
 .listas li input[type="radio"] {
   margin-right: 5px; /* Espaciado entre el radio y su etiqueta */
 }
@@ -272,6 +276,9 @@ ul ul{
   /*height: 100vh; /* Altura completa de la ventana del navegador */
 }
 
+p{
+  margin-bottom: 20px;
+}
 /* -----------BOTON ENVIAR ------------------------*/
 
 #boton-enviar {

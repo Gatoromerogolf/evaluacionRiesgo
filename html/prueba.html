@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="toggleVisibility()">Toggle Visibility</button>
+    <div id="myElement" style="display: none; opacity: 0; transition: opacity 0.5s;">
+        Este es un contenido oculto que aparecerá con una transición de opacidad.
+    </div>
+
+</body>
+
+<script>
+function toggleVisibility() {
+    var element = document.getElementById('myElement');
+    if (element.style.display === 'none') {
+        element.style.display = 'block';
+        // Asegúrate de darle tiempo al navegador para que reconozca el cambio de 'display'
+        setTimeout(() => {
+            element.style.opacity = 1;
+        }, 10);
+    } else {
+        element.style.opacity = 0;
+        // Espera a que termine la transición de opacidad para cambiar el display a 'none'
+        element.addEventListener('transitionend', function handler() {
+            element.style.display = 'none';
+            element.removeEventListener('transitionend', handler);
+        });
+    }
+}
+
+</script>
+</html>
