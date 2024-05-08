@@ -112,7 +112,7 @@
             <label><input type="radio" name="A-V-10" value="4">Siempre</label>
           </li>
 
-          <li>11. Frecuencia de las reuniones del:</li>
+          <li id="tituloFrecuencia" style="display: none">11. Frecuencia de las reuniones del:</li>
 
             <li id="lineaAltaG" style="display: none"class="frecuencia-V">Comité de Alta Gerencia:
               <label class="first-radio-V"><input type="radio" name="A-V-9-1" value="1">Semanal</label>
@@ -199,6 +199,8 @@
       document.getElementById("reunionComAud").style.display = 'block';
       document.getElementById("reunionComAud1").style.display = 'inline-block';
       document.getElementById("reunionComAud2").style.display = 'inline-block';
+      document.getElementById("tituloFrecuencia").style.display = 'inline-block';
+
     } else {
       // Mostrar las líneas si se selecciona cualquier otro valor
       document.getElementById('lineaComAud').style.display = 'none';
@@ -221,6 +223,7 @@
       document.getElementById('lineaAltaG').style.display = 'block';
       document.getElementById('lineaAltaG1').style.display = 'inline-block';
       document.getElementById('lineaAltaG2').style.display = 'inline-block';
+      document.getElementById("tituloFrecuencia").style.display = 'inline-block';
     } else {
       // Mostrar las líneas si se selecciona cualquier otro valor
       document.getElementById('lineaAltaG').style.display = 'none';
@@ -240,6 +243,7 @@
       document.getElementById('lineaNomSuc').style.display = 'block';
       document.getElementById('lineaNomSuc1').style.display = 'inline-block';
       document.getElementById('lineaNomSuc2').style.display = 'inline-block';
+      document.getElementById("tituloFrecuencia").style.display = 'inline-block';
     } else {
       // Mostrar las líneas si se selecciona cualquier otro valor
       document.getElementById('lineaNomSuc').style.display = 'none';
@@ -258,6 +262,7 @@ onclick="mostrarOcultarComCompen(this.value)"
       document.getElementById('comiteCompen').style.display = 'block';
       document.getElementById('comiteCompen1').style.display = 'inline-block';
       document.getElementById('comiteCompen2').style.display = 'inline-block';
+      document.getElementById("tituloFrecuencia").style.display = 'inline-block';
     } else {
       // Mostrar las líneas si se selecciona cualquier otro valor
       document.getElementById('comiteCompen').style.display = 'none';
@@ -274,6 +279,7 @@ onclick="mostrarOcultarComCompen(this.value)"
       document.getElementById('comiteTecno').style.display = 'block';
       document.getElementById('comiteTecno1').style.display = 'inline-block';
       document.getElementById('comiteTecno2').style.display = 'inline-block';
+      document.getElementById("tituloFrecuencia").style.display = 'inline-block';
     } else {
       // Mostrar las líneas si se selecciona cualquier otro valor
       document.getElementById('comiteTecno').style.display = 'none';
@@ -290,6 +296,7 @@ onclick="mostrarOcultarComCompen(this.value)"
       document.getElementById('comiteRiesgo').style.display = 'block';
       document.getElementById('comiteRiesgo1').style.display = 'inline-block';
       document.getElementById('comiteRiesgo2').style.display = 'inline-block';
+      document.getElementById("tituloFrecuencia").style.display = 'inline-block';
     } else {
       // Mostrar las líneas si se selecciona cualquier otro valor
       document.getElementById('comiteRiesgo').style.display = 'none';
