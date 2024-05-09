@@ -379,3 +379,72 @@ p{
   margin-left: auto;
   margin-right: auto;
 }
+
+/* --------------   PREGUNTAS EN TABLAS
+  /* Estilos para la tabla */
+  table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+  th {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    background-color: #f2f2f2;
+    font-family:'Roboto', sans-serif;
+    font: size 16px;
+
+  }
+  td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    font-family:'Roboto', sans-serif;
+    font: size 16px;
+  }
+
+  /* Eliminar el borde en el último elemento para evitar doble línea */
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* Clases para controlar el ancho de las columnas */
+  .pregunta-col {
+    /*width: 30%; /* Ancho inicial de la columna de preguntas */
+    max-width: 200px;
+    /* Ancho máximo de la columna de preguntas */
+  }
+
+  .pregunta-col-2 {
+    /*width: 30%; /* Ancho inicial de la columna de preguntas */
+    max-width: 200px;
+    /* Ancho máximo de la columna de preguntas */
+    margin-left: 50px;
+  }
+
+  .respuesta-col {
+    width: 10%;
+    /* Ancho inicial para las columnas de respuesta */
+    max-width: 30px;
+    /* Ancho máximo para las columnas de respuesta */
+  }
+
+  .respuesta-col{
+    width: 10%;
+    /* Ancho inicial para las columnas de respuesta */
+    max-width: 30px;
+    /* Ancho máximo para las columnas de respuesta */
+  }
+
+  /* Estilos para contenedores de radios */
+  .radio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Estilos para etiquetas debajo de los radios */
+  .radio-label {
+    margin-top: 4px;
+  }
