@@ -9,5 +9,8 @@ login.addEventListener('click', (e) => {
         password: clave.value
     }
 
+
     console.log(data)
+
+    window.location.href = "Menu-General.html";
 })

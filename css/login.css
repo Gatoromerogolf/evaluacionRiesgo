@@ -10,7 +10,7 @@ body{
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color:brown;
+  background-color:rgb(161, 155, 155);
 }
 
 /*display: flex;
@@ -47,7 +47,7 @@ form label{
 
 form label .fa-solid{
   font-size: 20px;
-  color:brown;
+  color:rgb(212, 212, 221);
   margin-right: 10px;
 }
 

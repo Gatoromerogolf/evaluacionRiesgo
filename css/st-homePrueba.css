@@ -8,6 +8,13 @@ body{
   background:#e6e6e6;
 }
 
+p {
+  margin-left: 20px;
+  margin-bottom: 10px;
+  font-family:'Roboto', sans-serif;
+  font-size:16px;
+}
+
 h1 a{
   text-decoration: none;
 }
@@ -42,7 +49,7 @@ header nav ul{
 header nav ul li{
   float:left;
   /*margin-bottom: 10px;*/
-  margin: 0;
+  margin-left: 20px;
   padding: 2px 0;
 }
 
@@ -424,13 +431,6 @@ p{
   }
 
   .respuesta-col {
-    width: 10%;
-    /* Ancho inicial para las columnas de respuesta */
-    max-width: 30px;
-    /* Ancho máximo para las columnas de respuesta */
-  }
-
-  .respuesta-col{
     width: 10%;
     /* Ancho inicial para las columnas de respuesta */
     max-width: 30px;
