@@ -8,8 +8,6 @@
   <link href="../css/st-homePrueba.css" rel="stylesheet">
   <!-- <link href="css/st-gobCorpo.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-
 </head>
 
 <body>
@@ -17,7 +15,6 @@
     <div class="logo">
       <img src="../img/bdtancho.png" width="100%" alt="">
     </div>
-
   </header>
 
   <section class="main">
@@ -29,115 +26,211 @@
           <a href="MA-5.html"><img src="../img/siguiente.png" alt="Avance"></a>
         </div>
       </div>
-
       <br>
-
       <hr>
-
       <form id="formulario">
         <br>
         <h1>IV - Comités del Directorio.</h1>
         <br>
-        <ul class="listas">
-          <li>1. Existe un Comité de Auditoría?
-            <label class="first-radio"><input type="radio" name="A-V-1" value="1"
-                onclick="mostrarOcultarComAudit(this.value)">Si</label>
-            <label><input type="radio" name="A-V-1" value="2" onclick="mostrarOcultarComAudit(this.value)">No</label>
-          </li>
-          <li id="lineaComAud" style="display: none">1.1. El Auditor interno pertenece o concurre a todas las reuniones del Comité de Auditoría?
-            <label id="lineaComAudS" class="first-radio" style="display: none"><input type="radio" name="A-V-1-1"
-                value="1">Si</label>
-            <label id="lineaComAudN" style="display: none"><input type="radio" name="A-V-1-1" value="2">No</label>
-          </li>
+        <table>
+          <tr>
+              <th class="pregunta-col">Situación</th>
+              <th class="respuesta-col">Si</th>
+              <th class="respuesta-col">No</th>
+              <th class="respuesta-col"></th>
+              <th class="respuesta-col"></th>
+          </tr>
 
-          <li>2. La estructura de Comités del Directorio está documentada:
-            <label class="first-radio"><input type="radio" name="A-V-2" value="3">Si</label>
-            <label><input type="radio" name="A-V-2" value="4">No</label>
-          </li>
+          <tr>
+            <td class="pregunta-col">1. Existe un Comité de Auditoría</td>
 
-          <li>3. Existe un Comité de Alta Gerencia:
-            <label class="first-radio"><input type="radio" name="A-V-3" value="1" onclick="mostrarOcultarComAltaG(this.value)">Si</label>
-            <label><input type="radio" name="A-V-3" value="2" onclick="mostrarOcultarComAltaG(this.value)">No</label>
-          </li>
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-4-1" value="1" onclick="manejarVisibilidadFila2()"></td>
 
-          <li>4. Existe un Comité de Nominaciones y sucesiones:
-            <label class="first-radio"><input type="radio" name="A-V-4" value="1" onclick="mostrarOcultarComNomSuc(this.value)">Si</label>
-            <label><input type="radio" name="A-V-4" value="2" onclick="mostrarOcultarComNomSuc(this.value)">No</label>
-          </li>
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-4-1" value="2" onclick="manejarVisibilidadFila2()"></td>
+          </tr>
 
-          <li>5. Existe un Comité de Compensaciones:
-            <label class="first-radio"><input type="radio" name="A-V-5" value="1" onclick="mostrarOcultarComCompen(this.value)">Si</label>
-            <label><input type="radio" name="A-V-5" value="2" onclick="mostrarOcultarComCompen(this.value)">No</label>
-          </li>
+          <tr>
+            <td class="pregunta-col" id="fila-2" style="display: none">1.1. El Auditor interno pertenece o concurre a todas las reuniones del Comité de Auditoría?</td>
 
-          <li>6. Existe un Comité de Tecnologías de la Información:
-            <label class="first-radio"><input type="radio" name="A-V-6" value="1"
-              onclick="mostrarOcultarComTecno(this.value)">Si</label>
-            <label><input type="radio" name="A-V-6" value="2" onclick="mostrarOcultarComTecno(this.value)">No</label>
-          </li>
+            <td class="respuesta-col" id="fila-2a" style="display: none">
+              <div class="radio-container"><input type="radio" name="A-4-1-1" value="1"></td>
 
-          <li>7. Existe un Comité de Riesgos:
-            <label class="first-radio"><input type="radio" name="A-V-7" value="1" onclick="mostrarOcultarComRiesgo(this.value)">Si</label>
-            <label><input type="radio" name="A-V-7" value="2" onclick="mostrarOcultarComRiesgo(this.value)">No</label>
-          </li>
-
-          <li>8. Cada Comité está compuesto por al menos un director independiente:
-            <label class="first-radio"><input type="radio" name="A-V-8" value="3">Si</label>
-            <label><input type="radio" name="A-V-8" value="4">No</label>
-          </li>
-
-          <li>9. Cada Comité redacta un acta por cada reunión:
-            <label class="first-radio"><input type="radio" name="A-V-9" value="3">Ninguno</label>
-            <label><input type="radio" name="A-V-9" value="4">La mayoría</label>
-            <label><input type="radio" name="A-V-9" value="4">Todos</label>
-          </li>
-
-          <li>10. Cada Comité envía informes al Directorio:
-            <label class="first-radio"><input type="radio" name="A-V-8" value="3">Nunca</label>
-            <label><input type="radio" name="A-V-10" value="4">Frecuentemente</label>
-            <label><input type="radio" name="A-V-10" value="4">Siempre</label>
-          </li>
-
-          <li id="tituloFrecuencia" style="display: none">11. Frecuencia de las reuniones del:</li>
-
-            <li id="lineaAltaG" style="display: none"class="frecuencia-V">Comité de Alta Gerencia:
-              <label class="first-radio-V"><input type="radio" name="A-V-9-1" value="1">Semanal</label>
-              <label><input id="lineaAltaG1" style="display: none" type="radio" name="A-V-9-1" value="2">Quincenal</label>
-              <label><input id="lineaAltaG2" style="display: none" type="radio" name="A-V-9-1" value="3">Mensual</label>
-            </li>
-
-            <li id="reunionComAud" style="display: none" class="frecuencia-V">Comité de Auditoría
-              <label class="first-radio-V "><input type="radio" name="A-V-9-2" value="1" id="reunionComAud1"
-                  style="display: none">Quincenal</label>
-              <label><input type="radio" name="A-V-9-2" value="2"
-                  style="display: none" id="reunionComAud2">Mensual</label>
-            </li>
-
-            <li id="lineaNomSuc" style="display: none" class="frecuencia-V">Comité de Nominaciones y sucesiones
-              <label class="first-radio"><input type="radio" name="A-V-9-3" value="1" id="lineaNomSuc1" style="display: none">Ad-hoc</label>
-              <label class="first-radio"><input type="radio" name="A-V-9-3" value="2" id="lineaNomSuc2" style="display: none">
-                Anual</label>
-            </li>
-
-            <li id="comiteCompen" style="display: none" class="frecuencia-V">Comité de Compensaciones
-              <label class="first-radio"><input type="radio" name="opcion" value="1" id="comiteCompen1" style="display: none">Ad-hoc</label>
-              <label class="first-radio"><input type="radio" name="opcion" value="2" id="comiteCompen2" style="display: none">Anual</label>
-            </li>
-
-            <li id="comiteTecno" style="display: none" class="frecuencia-V"> Comité de Tecnologías de la Información
-              <label class="first-radio"><input type="radio" name="opcion" value="1" id="comiteTecno1" style="display: none">Mensual</label>
-              <label class="first-radio"><input type="radio" name="opcion" value="2" id="comiteTecno2" style="display: none">Ad-hoc
-              </label>
+            <td class="respuesta-col" id="fila-2b" style="display: none">
+              <div class="radio-container"><input type="radio" name="A-4-1-1" value="2"></td>
+          </tr>
 
 
-            <li id="comiteRiesgo" style="display: none" class="frecuencia-V">Comité de Riesgos
-              <label class="first-radio"><input type="radio" name="opcion" value="3" id="comiteRiesgo1" style="display: none">Mensual</label>
-              <label class="first-radio"><input type="radio" name="opcion" value="3" id="comiteRiesgo2" style="display: none">
-              Bimestral</label>
-            </li>
-          <!-- </ul> -->
-        </ul>
+          <tr>
+            <td class="pregunta-col">2. La estructura de Comités del Directorio está documentada:</td>
 
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-4-2" value="1"></td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-4-2" value="2"></td>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col">3. Existe un Comité de Alta Gerencia</td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-4-3" value="1" onclick="mostrarOcultarComAltaG(this.value)"></td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-4-3" value="2" onclick="mostrarOcultarComAltaG(this.value)"></td>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col">4. Existe un Comité de nominaciones y sucesiones</td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-4-4" value="1" onclick="mostrarOcultarComNomSuc(this.value)"></td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-4-4" value="2" onclick="mostrarOcultarComNomSuc(this.value)"></td>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col">5. Existe un Comité de Compensaciones</td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-4-5" value="1" onclick="mostrarOcultarComCompen(this.value)"></td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-4-5" value="2" onclick="mostrarOcultarComCompen(this.value)"></td>
+          </tr>
+          
+          <tr>
+            <td class="pregunta-col">6. Existe un Comité de Tecnologías de la Información:</td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-4-6" value="1" onclick="mostrarOcultarComTecno(this.value)"></td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-4-6" value="2" onclick="mostrarOcultarComTecno(this.value)"></td>
+          </tr>
+     
+          <tr>
+            <td class="pregunta-col">7. Existe un Comité de Riesgos</td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-4-7" value="1" onclick="mostrarOcultarComRiesgo(this.value)"></td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-4-7" value="2" onclick="mostrarOcultarComRiesgo(this.value)"></td>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col">8. Cada Comité está compuesto por al menos un director independiente:</td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-4-8" value="1"></td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-4-8" value="2"></td>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col">9. Cada Comité redacta un acta por cada reunión:</td>
+
+            <td class="respuesta-col" style="font-size: 13px">
+              <div class="radio-container"><input type="radio" name="A-4-9" value="1">Ninguno</td>
+
+            <td class="respuesta-col" style="font-size: 13px">
+              <div class="radio-container"><input type="radio" name="A-4-9" value="2">Varios</div></td>
+
+            <td class="respuesta-col" style="font-size: 13px">
+              <div class="radio-container"><input type="radio" name="A-4-9" value="2">Todos</div></td>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col">10. Cada Comité envía informes al Directorio:</td>
+
+            <td class="respuesta-col" style="font-size: 13px">
+              <div class="radio-container"><input type="radio" name="A-4-10" value="1">Nunca</div></td>
+
+            <td class="respuesta-col" style="font-size: 13px">
+              <div class="radio-container"><input type="radio" name="A-4-10" value="2">Usualmente</div></td>
+
+            <td class="respuesta-col" style="font-size: 13px">
+              <div class="radio-container"><input type="radio" name="A-4-10" value="3">Siempre</div></td>
+          </tr>
+
+          <tr>
+          <td id="tituloFrecuencia" style="display: none">11. Frecuencia de las reuniones del:</td>
+          </tr>
+
+          
+          <tr>
+            <td class="pregunta-col" id="reunionComAud" style="display: none">11.1. Comité de Auditoría:</td>
+
+            <td class="respuesta-col" id="reunionComAud1" style="display: none; font-size: 13px">
+              <div class="radio-container"><input type="radio" name="A-4-11-1" value="1">Quincenal</div></td>
+
+            <td class="respuesta-col" id="reunionComAud2" style="display: none; font-size: 13px">
+              <div class="radio-container"><input type="radio" name="A-4-11-1" value="2">Mensual</div></td>
+
+          </tr>
+
+          <tr>
+            <td class="pregunta-col" id="lineaAltaG" style="display: none">11.3. Comité de Alta Gerencia:</td>
+
+            <td class="respuesta-col" id="lineaAltaG1" style="display: none; font-size: 13px">
+              <div class="radio-container"><input type="radio" name="A-4-11-3-1" value="1">Semanal</div></td>
+
+            <td class="respuesta-col" id="lineaAltaG2" style="display: none; font-size: 13px">
+              <div class="radio-container"><input type="radio" name="A-4-11-3-2" value="2">Quincenal</div></td>
+
+            <td class="respuesta-col" id="lineaAltaG3" style="display: none; font-size: 13px">
+              <div class="radio-container"><input type="radio" name="A-4-11-3-3" value="3">Mensual</div></td>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col" id="lineaNomSuc" style="display: none">11.4. Comité de Nominaciones y sucesiones:</td>
+
+            <td class="respuesta-col" id="lineaNomSuc1" style="display: none; font-size: 13px">
+              <div class="radio-container"><input type="radio" name="A-4-11-4-1" value="1">Ad-hoc</div></td>
+
+            <td class="respuesta-col" id="lineaNomSuc2" style="display: none; font-size: 13px">
+              <div class="radio-container"><input type="radio" name="A-4-11-4-2" value="2">Anual</div></td>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col" id="comiteCompen" style="display: none">11.5. Comité de Compensaciones:</td>
+
+            <td class="respuesta-col" id="comiteCompen1" style="display: none; font-size: 13px">
+              <div class="radio-container"><input type="radio" name="A-4-11-5-1" value="1">Ad-hoc</div></td>
+
+            <td class="respuesta-col" id="comiteCompen2" style="display: none; font-size: 13px">
+              <div class="radio-container"><input type="radio" name="A-4-11-5-2" value="2">Anual</div></td>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col" id="comiteTecno" style="display: none">11.6. Comité de Tecnologías de la Información:</td>
+
+            <td class="respuesta-col" id="comiteTecno1" style="display: none; font-size: 13px">
+              <div class="radio-container"><input type="radio" name="A-4-11-6-1" value="1">Mensual</div></td>
+
+            <td class="respuesta-col" id="comiteTecno2" style="display: none; font-size: 13px">
+              <div class="radio-container"><input type="radio" name="A-4-11-6-2" value="2">Ad-hoc</div></td>
+          </tr>
+
+
+          <tr>
+            <td class="pregunta-col" id="comiteRiesgo" style="display: none">11.7. Comité de Riesgos:</td>
+
+            <td class="respuesta-col" id="comiteRiesgo1" style="display: none; font-size: 13px">
+              <div class="radio-container"><input type="radio" name="A-4-11-7-1" value="1">Mensual</div></td>
+
+            <td class="respuesta-col" id="comiteRiesgo2" style="display: none; font-size: 13px">
+              <div class="radio-container"><input type="radio" name="A-4-11-7-2" value="2">Bimestral</div></td>
+          </tr>
+
+
+      </table>
+<
 
         <div class="centrado-flex">
           <button type="submit" id="boton-enviar">Enviar</button>
@@ -170,11 +263,11 @@
     </footer>
   </section>
 
-</body>
 
 
 
-<script>
+
+<!-- <script>
   function mostrarOcultarComAudit(valorSeleccionadoAB) {
 
     // Muestra las líneas si el valor seleccionado es '1'
@@ -197,8 +290,14 @@
       document.getElementById("reunionComAud2").style.display = 'none';
     }
   }
-</script>
+</script> -->
 
+<script>
+function mostrarOcultarComAudit(value) {
+  var displayStatus = (value == '1') ? 'table-row' : 'none';
+  document.getElementById('lineaComAud').style.display = displayStatus;
+}
+</script>
 
 
 <script>
@@ -206,15 +305,17 @@
 
     // Muestra las líneas si el valor seleccionado es '1'
     if (valorSelec === '1') {
-      document.getElementById('lineaAltaG').style.display = 'block';
-      document.getElementById('lineaAltaG1').style.display = 'inline-block';
-      document.getElementById('lineaAltaG2').style.display = 'inline-block';
-      document.getElementById("tituloFrecuencia").style.display = 'inline-block';
+      document.getElementById('lineaAltaG').style.display = 'table-cell';
+      document.getElementById('lineaAltaG1').style.display = 'table-cell';
+      document.getElementById('lineaAltaG2').style.display = 'table-cell';
+      document.getElementById('lineaAltaG3').style.display = 'table-cell';
+      document.getElementById("tituloFrecuencia").style.display = 'table-cell';;
     } else {
       // Mostrar las líneas si se selecciona cualquier otro valor
       document.getElementById('lineaAltaG').style.display = 'none';
       document.getElementById('lineaAltaG1').style.display = 'none';
       document.getElementById('lineaAltaG2').style.display = 'none';
+      document.getElementById('lineaAltaG3').style.display = 'none';
     }
   }
 </script>
@@ -226,10 +327,10 @@
 
     // Muestra las líneas si el valor seleccionado es '1'
     if (valorSelec === '1') {
-      document.getElementById('lineaNomSuc').style.display = 'block';
-      document.getElementById('lineaNomSuc1').style.display = 'inline-block';
-      document.getElementById('lineaNomSuc2').style.display = 'inline-block';
-      document.getElementById("tituloFrecuencia").style.display = 'inline-block';
+      document.getElementById('lineaNomSuc').style.display = 'table-cell';
+      document.getElementById('lineaNomSuc1').style.display = 'table-cell';
+      document.getElementById('lineaNomSuc2').style.display = 'table-cell';
+      document.getElementById("tituloFrecuencia").style.display = 'table-cell';
     } else {
       // Mostrar las líneas si se selecciona cualquier otro valor
       document.getElementById('lineaNomSuc').style.display = 'none';
@@ -239,16 +340,16 @@
   }
 </script>
 
-onclick="mostrarOcultarComCompen(this.value)"
+
 
 <script>
   function mostrarOcultarComCompen(valorSelec) {
     // Muestra las líneas si el valor seleccionado es '1'
     if (valorSelec === '1') {
-      document.getElementById('comiteCompen').style.display = 'block';
-      document.getElementById('comiteCompen1').style.display = 'inline-block';
-      document.getElementById('comiteCompen2').style.display = 'inline-block';
-      document.getElementById("tituloFrecuencia").style.display = 'inline-block';
+      document.getElementById('comiteCompen').style.display = 'table-cell';
+      document.getElementById('comiteCompen1').style.display = 'table-cell';
+      document.getElementById('comiteCompen2').style.display = 'table-cell';
+      document.getElementById("tituloFrecuencia").style.display = 'table-cell';
     } else {
       // Mostrar las líneas si se selecciona cualquier otro valor
       document.getElementById('comiteCompen').style.display = 'none';
@@ -262,10 +363,10 @@ onclick="mostrarOcultarComCompen(this.value)"
   function mostrarOcultarComTecno(valorSelec) {
     // Muestra las líneas si el valor seleccionado es '1'
     if (valorSelec === '1') {
-      document.getElementById('comiteTecno').style.display = 'block';
-      document.getElementById('comiteTecno1').style.display = 'inline-block';
-      document.getElementById('comiteTecno2').style.display = 'inline-block';
-      document.getElementById("tituloFrecuencia").style.display = 'inline-block';
+      document.getElementById('comiteTecno').style.display = 'table-cell';
+      document.getElementById('comiteTecno1').style.display = 'table-cell';
+      document.getElementById('comiteTecno2').style.display = 'table-cell';
+      document.getElementById("tituloFrecuencia").style.display = 'table-cell';
     } else {
       // Mostrar las líneas si se selecciona cualquier otro valor
       document.getElementById('comiteTecno').style.display = 'none';
@@ -279,10 +380,10 @@ onclick="mostrarOcultarComCompen(this.value)"
   function mostrarOcultarComRiesgo(valorSelec) {
     // Muestra las líneas si el valor seleccionado es '1'
     if (valorSelec === '1') {
-      document.getElementById('comiteRiesgo').style.display = 'block';
-      document.getElementById('comiteRiesgo1').style.display = 'inline-block';
-      document.getElementById('comiteRiesgo2').style.display = 'inline-block';
-      document.getElementById("tituloFrecuencia").style.display = 'inline-block';
+      document.getElementById('comiteRiesgo').style.display = 'table-cell';
+      document.getElementById('comiteRiesgo1').style.display = 'table-cell';
+      document.getElementById('comiteRiesgo2').style.display = 'table-cell';
+      document.getElementById("tituloFrecuencia").style.display = 'table-cell';
     } else {
       // Mostrar las líneas si se selecciona cualquier otro valor
       document.getElementById('comiteRiesgo').style.display = 'none';
@@ -292,8 +393,41 @@ onclick="mostrarOcultarComCompen(this.value)"
   }
 </script>
 
-<script src="../datos/tabla01.js"></script>
-<script src="../datos/tabla02.js"></script>
-<script src="../apps/prueba.js"></script>
+<script>
+  function manejarVisibilidadFila2() {
+    console.log ("entro")
+      // Obtener el valor seleccionado en la pregunta "A-9-3"
+      var valorSeleccionado = document.querySelector('input[name="A-4-1"]:checked').value;
+     console.log ("valor" + valorSeleccionado)
+      // Seleccionar la fila que queremos mostrar/ocultar
+      // var fila2 = document.getElementById('fila-2');
 
+      // Si el valor no es "1", ocultamos la fila, si no, la mostramos
+      if (valorSeleccionado === '1') {
+          // fila2.style.display = ' ';
+          console.log ("entro por aca")
+          document.getElementById('fila-2').style.display = 'table-cell';
+          document.getElementById('fila-2a').style.display = 'table-cell';
+          document.getElementById('fila-2b').style.display = 'table-cell';
+          document.getElementById('tituloFrecuencia').style.display = 'table-cell';
+          document.getElementById('reunionComAud').style.display = 'table-cell';
+          document.getElementById('reunionComAud1').style.display = 'table-cell';
+          document.getElementById('reunionComAud2').style.display = 'table-cell';
+      } else {
+          // fila2.style.display = 'none';
+          document.getElementById('fila-2').style.display = 'none';
+          document.getElementById('fila-2a').style.display = 'none';
+          document.getElementById('fila-2b').style.display = 'none';
+          document.getElementById('reunionComAud').style.display = 'none';
+          document.getElementById('reunionComAud1').style.display = 'none';
+          document.getElementById('reunionComAud2').style.display = 'none';
+
+      }
+  }
+  </script>
+
+      <script src="../datos/tabla01.js"></script>
+      <script src="../datos/tabla02.js"></script>
+      <script src="../apps/prueba.js"></script>
+</body>
 </html>

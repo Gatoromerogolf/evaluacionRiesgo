@@ -38,43 +38,77 @@
         <br>
         <h1>IX - Cumplimiento y Control.</h1>
         <br>
-        <ul class="listas">
-          <li>1. Existe una estructura documentada de primera y tercera línea de defensa
-            <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
-            <label><input type="radio" name="opcion" value="4">No</label>
-          </li>
-          <br>
-          <li>2. El departamento de auditoría está dirigido por un profesional competente
-            <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
-            <label><input type="radio" name="opcion" value="4">No</label>
-          </li>
 
-          <li><i><label for="porcentaje">2. Nivel de satisfacción con el desempeño del profesional a cargo del
-              departamento de auditoría:</label></li>
-            <!-- <label>
-              <input style="width: 300px" type="range" id="rangoRange" name="opcion" min="0" max="100" step="25" onchange="actualizarValorRange(this.value)">
-              </label>
-            <span id="valorRange">%</span>
-          </li>
-          <li> -->
-          <li>
-            <label style="margin-left: 200px; first-radio"><input type="radio" name="opcion" value="3">Bajo</label>
-            <label><input type="radio" name="opcion" value="4">Regular</label>
-            <label><input type="radio" name="opcion" value="4">Satisfactorio</label>
-            <label><input type="radio" name="opcion" value="4">Muy satisfactorio</label>
-          </i></li>
-          <br>
-          <li>3. El auditor interno reporta al Presidente del comité de Auditoría
-            <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
-            <label><input type="radio" name="opcion" value="4">No</label>
-          </li>
+        <table>
+          <tr>
+            <th class="pregunta-col">Situación</th>
+            <th class="respuesta-col">Si</th>
+            <th class="respuesta-col">No</th>
+            <th class="respuesta-col"></th>
+            <th class="respuesta-col"></th>
+          </tr>
 
-          <li>4. El Comité de Auditoría somete a la aprobación del Directorio al auditor externo y su remuneración
-            <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
-            <label><input type="radio" name="opcion" value="4">No</label>
-          </li>
-        </ul>
+          <tr>
+            <td class="pregunta-col">1. Existe una estructura documentada de primera y tercera línea de defensa
+            </td>
 
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-9-1" value="3"></td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-9-1" value="4"></td>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col">2. El departamento de auditoría está dirigido por un profesional competente
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-9-2" value="3"></td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-9-2" value="4"></td>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col">2. Nivel de satisfacción con el desempeño del profesional a cargo del departamento de auditoría:
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-9-3" value="3">Nulo</td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-9-3" value="4">Bajo</td>
+ 
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-9-3" value="3">Medio</td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-9-3" value="4">Alto</td>       
+          </tr>
+
+          <tr>
+            <td class="pregunta-col">3. El auditor interno reporta al Presidente del comité de Auditoría
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-9-4" value="3"></label>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-9-4" value="4"></label>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col">4. El Comité de Auditoría somete a la aprobación del Directorio al auditor externo y su remuneración
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-9-5" value="3"></label>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-9-5" value="4"></label>
+          </tr>
+        </table>
 
         <div class="centrado-flex">
           <button type="submit" id="boton-enviar">Enviar</button>

@@ -390,7 +390,7 @@ p{
 /* --------------   PREGUNTAS EN TABLAS
   /* Estilos para la tabla */
   table {
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     border-collapse: collapse;
   }
@@ -435,6 +435,7 @@ p{
     /* Ancho inicial para las columnas de respuesta */
     max-width: 30px;
     /* Ancho máximo para las columnas de respuesta */
+    font-size: 13px;
   }
 
   /* Estilos para contenedores de radios */
@@ -447,4 +448,9 @@ p{
   /* Estilos para etiquetas debajo de los radios */
   .radio-label {
     margin-top: 4px;
+  }
+
+  /* el checkbox de MA-1 en dos columnas*/
+  .dos-columnas {
+    column-count: 3;
   }

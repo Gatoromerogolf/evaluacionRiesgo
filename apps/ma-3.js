@@ -69,6 +69,7 @@ function sumaPuntosCheckbox() {
 
 function calculaResultados() {
   tabla = respuestas[0] == 1 ? tabla01 : tabla02;
+  console.log (tabla);
   maximo = respuestas[0] == 1 ? tabla01[0][2] : tabla02[0][2];
   console.log(respuestas[0], maximo, tabla01[0][2], tabla02[0][2]);
 
