@@ -452,5 +452,11 @@ p{
 
   /* el checkbox de MA-1 en dos columnas*/
   .dos-columnas {
-    column-count: 3;
+    column-count: 4;
+  }
+
+  .tablaCheckbox {
+      width: 91%;  /* Ajusta este valor según sea necesario para coincidir con las otras tablas */
+      margin: 0 auto;  /* Esto centra el contenedor en el medio de la página */
+  
   }

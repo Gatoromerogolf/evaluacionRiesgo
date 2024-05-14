@@ -25,6 +25,7 @@ const grupos = [ // las respuestas
 ];
 
 function obtenerValoresSeleccionados(){
+    respuestas=[];
 
 grupos.forEach((nombreGrupo) =>{
     const grupo = document.querySelector(`input[name='${nombreGrupo}']:checked`);
@@ -58,12 +59,29 @@ function controlarFaltantes(){
                     }}
              else{    
                 if (respuestas[indiceFilas] == null) {
-                    console.log (`indice ${indiceFilas}`)
                     faltantes[indiceFaltantes] = indiceFilas+1;
                     indiceFaltantes++;
             }}
         }
+        // controla comite de auditoria con reuniones
+        if (respuestas[0] == 1 && respuestas[11]==null){
+                faltantes[indiceFaltantes] = 12
+                indiceFaltantes++
+        }
+        // controla los otros 5 comités con reuniones
+        for (var indice=3; indice<8; indice++){
+            if (respuestas[indice] == 1 && respuestas[indice+9] == null){
+                faltantes[indiceFaltantes] = indice + 10;
+                indiceFaltantes++
+            }
+        }
+    console.log(respuestas);
     console.log("faltantes " + faltantes );
+    return faltantes;
+}
+
+function valorizar(){
+
 }
 
 // se define el formulario y se evita que se envie por recarga de la página
@@ -77,10 +95,32 @@ document
 
 // verificar que se hayan seleccionado todos los elementos
 obtenerValoresSeleccionados();
-console.log(respuestas)
-controlarFaltantes();  
-  })
+var faltantes=controlarFaltantes(); 
+if (faltantes.length > 0) {
+        alert("Falta informar en estas filas: " + faltantes)
+}  else{
+    alert ("ahora anduvo bien")
+}
+})
 
+
+// ---------------------------
+
+function limpiarSelecciones() {
+    // Obtener todos los inputs tipo radio y checkbox
+    var radios = document.querySelectorAll('input[type="radio"]');
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  
+    // Desmarcar todos los radios
+    radios.forEach(function (radio) {
+      radio.checked = false;
+    });
+  
+    // Desmarcar todos los checkboxes
+    checkboxes.forEach(function (checkbox) {
+      checkbox.checked = false;
+    });
+  }
 
 // si no hay errores o faltantes se sigue adelante
 // se valoriza la respuesta
