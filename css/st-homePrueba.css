@@ -390,7 +390,7 @@ p{
 /* --------------   PREGUNTAS EN TABLAS
   /* Estilos para la tabla */
   table {
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
     border-collapse: collapse;
   }
@@ -456,7 +456,7 @@ p{
   }
 
   .tablaCheckbox {
-      width: 91%;  /* Ajusta este valor según sea necesario para coincidir con las otras tablas */
+      width: 96%;  /* Ajusta este valor según sea necesario para coincidir con las otras tablas */
       margin: 0 auto;  /* Esto centra el contenedor en el medio de la página */
   
   }
