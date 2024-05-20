@@ -25,16 +25,18 @@ h2{
   margin: 5px;
   padding:10px;
 }
-/*-----------------------
+
+  /*-----------------------
       MENU SUPERIOR */
 
-header, .main, footer {
-  width:100%;
-  max-width:1000px;
-  margin:10px auto;
-}
+  header, .main, footer {
+    width:100%;
+    max-width:1000px;
+    margin:10px auto;
+  }
 
-header nav{
+
+  header nav{
   background-color:#528FD5;
   overflow: hidden;
   max-width: 100%;
@@ -85,6 +87,17 @@ header nav ul li a:hover{
   margin-left: 10px; /* Opcional: añade espacio entre la imagen y el texto */
 }
 
+/* ------------  iconos de idioma --------------------*/
+.right-icons {
+  float: right;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.right-icons a{
+  margin-left: 10px;
+  padding: 10px;
+}
 
 
 /* --------------- ICONOS AVANCE  RETROCESO ----------*/
@@ -460,3 +473,43 @@ p{
       margin: 0 auto;  /* Esto centra el contenedor en el medio de la página */
   
   }
+
+  /*-----------------------
+      MENU SUPERIOR */
+
+  /*
+  header nav{
+  background-color:#528FD5;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+header nav ul{
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+
+header nav ul li{
+  float:left;
+  /*margin-bottom: 10px;
+  margin-left: 20px;
+  padding: 2px 0;
+}
+
+header nav ul li a{
+  text-decoration: none;
+  padding:5px 5px;
+  display:block;
+  max-width: 100px;
+  white-space: normal;
+  color:white;
+  font-family:'Roboto', sans-serif;
+  font-size:14px;
+  font-weight:500;
+}
+
+header nav ul li a:hover{
+    background-color:#75ACEC;
+  }
+  */
