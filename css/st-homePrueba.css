@@ -90,34 +90,33 @@ header nav ul li a:hover{
 /* ------------   NOmbre comañia centrado  -------*/
 
 
+
 .containerTitulo {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  align-items: center; /* Centra verticalmente los elementos */
 }
 
-.containerTitulo > div {
-  display: flex;
-  align-items: center;
+.containerTitulo img {
+  margin-right: 10px; /* Espacio entre la imagen y el texto */
 }
 
 #nombreCia {
-  flex: 1;
-  text-align: center;
+  flex-grow: 1; /* Permite que el texto ocupe todo el espacio restante */
+  text-align: center; /* Centra horizontalmente el texto */
   font-size: 20px;
   font-weight: 700;
-  font-family:'Roboto', sans-serif;  
+  font-family:'Roboto', sans-serif;
+  color:#0066cc
 }
 
 .right-icons {
-  display: flex;
-  align-items: center;
+  margin-left: auto; /* Empuja los íconos hacia la derecha */
 }
 
 .right-icons img {
   margin-left: 10px; /* Espacio entre los íconos */
 }
+
 /*
 .containerTitulo {
     width: 100%;
