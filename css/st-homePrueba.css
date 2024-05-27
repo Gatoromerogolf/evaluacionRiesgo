@@ -88,33 +88,36 @@ header nav ul li a:hover{
 }
 
 /* ------------   NOmbre comañia centrado  -------*/
+
+
 .containerTitulo {
   display: flex;
-  align-items: center; /* Centra verticalmente los elementos */
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.containerTitulo img {
-  margin-right: 10px; /* Espacio entre la imagen y el texto */
+.containerTitulo > div {
+  display: flex;
+  align-items: center;
 }
 
 #nombreCia {
-  flex-grow: 1; /* Permite que el texto ocupe todo el espacio restante */
-  text-align: center; /* Centra horizontalmente el texto */
+  flex: 1;
+  text-align: center;
   font-size: 20px;
   font-weight: 700;
-  font-family:'Roboto', sans-serif;
-  color:#0066cc
+  font-family:'Roboto', sans-serif;  
 }
 
 .right-icons {
-  margin-left: auto; /* Empuja los íconos hacia la derecha */
+  display: flex;
+  align-items: center;
 }
 
 .right-icons img {
   margin-left: 10px; /* Espacio entre los íconos */
 }
-
-
 /*
 .containerTitulo {
     width: 100%;
