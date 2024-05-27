@@ -87,8 +87,53 @@ header nav ul li a:hover{
   margin-left: 10px; /* Opcional: añade espacio entre la imagen y el texto */
 }
 
-/* ------------  iconos de idioma --------------------*/
+/* ------------   NOmbre comañia centrado  -------*/
+.containerTitulo {
+  display: flex;
+  align-items: center; /* Centra verticalmente los elementos */
+}
+
+.containerTitulo img {
+  margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+#nombreCia {
+  flex-grow: 1; /* Permite que el texto ocupe todo el espacio restante */
+  text-align: center; /* Centra horizontalmente el texto */
+  font-size: 20px;
+  font-weight: 700;
+  font-family:'Roboto', sans-serif;
+  color:#0066cc
+}
+
 .right-icons {
+  margin-left: auto; /* Empuja los íconos hacia la derecha */
+}
+
+.right-icons img {
+  margin-left: 10px; /* Espacio entre los íconos */
+}
+
+
+/*
+.containerTitulo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+#nombreCia {
+    flex-grow: 1;
+    font-family:'Roboto', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    color:#0066cc;
+    text-align:center;}
+    /*margin: 0 20px;*/
+
+/* ------------  iconos de idioma --------------------*/
+/*.right-icons {
   float: right;
   margin-top: 20px;
   margin-right: 20px;
@@ -98,8 +143,17 @@ header nav ul li a:hover{
   margin-left: 10px;
   padding: 10px;
 }
+*/
+/*
+.right-icons {
+    position: absolute;
+    right: 10px; /* Ajusta este valor según sea necesario */
+/*}
+.right-icons a {
+    margin-left: 10px;
+}
 
-
+*/
 /* --------------- ICONOS AVANCE  RETROCESO ----------*/
 
 .header-container {
